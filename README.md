@@ -84,7 +84,10 @@ Expected compatibility:
 
 This project has been tested successfully with the following ESP32 development boards:  
 
-- **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**  
+- **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
+
+<img src="./media/Adafruit_Feather_ESP32_V2.png" width="300" height="300" ALIGN="left" alt="Feather">
+
   ![Adafruit Feather ESP32 V2](media/Adafruit_Feather_ESP32_V2.png)  
 
 - **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3_Sense.md)**  
