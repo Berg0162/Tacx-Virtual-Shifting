@@ -14,20 +14,20 @@ This feature is standard on newer Tacx trainers — but older models never recei
 At the very minimum, you need:  
 - A **Tacx smart trainer** (legacy model without VS support).  
 - A **Zwift Click device** (tested and working).
-    - The Click is handy because it can be moved around and mounted in different spots on the handlebars and elsewhere. Notice that these are also offered in the secondhand market now by people that have bought later a Zwift Play device.
+    - The Click is handy because it can be moved around and mounted in different spots on the handlebars and elsewhere. Notice that these are also offered in online marketplaces now by people that have bought later a Zwift Play device.
 
 👉 That’s it! No need for extra gadgets.  
 
-- **No Zwift Cog required** — just keep your bike chain in gear **34/17** for the best simulation baseline.  
+- **No Zwift Cog required** — just keep your bike chain in an optimal chain line, like in gear **34/17** or optimize sprocket position for your setup.  
 - **No Zwift Play required** — although it will likely work as well if you own one.  
 
 This project bridges your trainer and Zwift so that **pressing shift buttons on Zwift Click** feels like changing gears on a VS-enabled trainer.  
 
 ## 🌟 Why this project?
 - Many Tacx smart trainers are still working great but lack VS.  
-- Garmin/Tacx enabled VS on selected new models.
+- Garmin/Tacx enabled VS on **ONLY** selected new models.
   - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
-- With a bit of software magic, we can unlock a similar experience.  
+- At minimal cost this project can unlock a similar experience and increase the durability of your trainer. 
 - This repo provides **an Arduino library + concise examples** so you can try VS yourself.  
 
 ## 📦 What you’ll find here
