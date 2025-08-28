@@ -96,3 +96,14 @@ If you’re interested in testing, coding, writing docs, or just giving feedback
 
 This is a community project and not affiliated with Tacx or Garmin.
 Use at your own risk.
+
+<details>
+<summary>⚖️ <b>Legal Notice (EU Context)</b></summary>
+
+This project is developed and published in accordance with **EU directives** that recognize the right to study, test, and develop software components for the purpose of achieving **interoperability** (e.g., Directive 2009/24/EC on the legal protection of computer programs, Article 6).  
+
+No part of this project is intended to **infringe upon intellectual property rights** or violate technological protection measures. All content is shared in good faith under the belief that it falls within the bounds of **legitimate research, reverse engineering for interoperability, and fair use under EU law**.  
+
+Users must ensure their own compliance with **national implementations of EU directives**, and are responsible for how they apply or modify this code.
+
+</details>
