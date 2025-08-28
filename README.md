@@ -87,17 +87,30 @@ Expected compatibility:
 5. **Upload to your device** → run the example and try Virtual Shifting!
 
 ## ⚠️ Disclaimer
+
 <details>
-<summary> 💡 <b>Research & Independence</b></summary>
-This project is <b>not affiliated with, endorsed by, or associated with any commercial virtual cycling platform or trainer manufacturer</b>. It is a <b>research and interoperability</b> initiative designed to explore <b>the increase of durability of legacy indoor bike trainers</b>. All development is conducted independently for <b>educational and experimental purposes</b>.
+<summary>💡 <b>Research & Independence</b></summary>
+
+This project is <b>not affiliated with, endorsed by, or associated with any commercial virtual cycling platform or trainer manufacturer</b>.  
+It is a <b>research and interoperability</b> initiative designed to explore ways to <b>increase the durability of legacy indoor bike trainers</b>.  
+All development is conducted independently for <b>educational and experimental purposes</b>.  
+
 </details>
+
 <details>
-<summary> ✅ <b>Compliance & Responsibility</b></summary> 
-This repository does <b>not include or promote any circumvention of technological protection measures</b>, reverse engineering of proprietary software, or unauthorized access to restricted systems. Users are <b>solely responsible</b> for ensuring that their use of this code complies with <b>local laws, software licenses, and platform terms of service</b>.
+<summary>✅ <b>Compliance & Responsibility</b></summary> 
+
+This repository does <b>not include or promote any circumvention of technological protection measures</b>, reverse engineering of proprietary software, or unauthorized access to restricted systems.  
+Users are <b>solely responsible</b> for ensuring that their use of this code complies with <b>local laws, software licenses, and platform terms of service</b>.  
+
 </details>
+
 <details>
-<summary> 🔍 <b>Copyright & Contact</b></summary>
-If you are a <b>rights holder</b> and believe that this project includes content that <b>violates your intellectual property rights</b>, please <b>open an issue</b> on this repository to initiate a respectful review. We are committed to responding promptly and, if appropriate, taking corrective action.
+<summary>🔍 <b>Copyright & Contact</b></summary>
+
+If you are a <b>rights holder</b> and believe that this project includes content that <b>violates your intellectual property rights</b>, please <b>open an issue</b> on this repository to initiate a respectful review.  
+We are committed to responding promptly and, if appropriate, taking corrective action.  
+
 </details>
 
 ## ❤️ Contributing
