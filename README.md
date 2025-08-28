@@ -22,7 +22,6 @@ At the very minimum, you need:
 
 This project bridges your trainer and Zwift so that **pressing shift buttons on Zwift Click** feels like changing gears on a VS-enabled trainer.  
 
-
 ## 🌟 Why this project?
 - Many Tacx smart trainers are still working great but lack VS.  
 - Garmin/Tacx enabled VS on selected new models.
@@ -87,15 +86,24 @@ Expected compatibility:
 4. **Install required libraries** using Arduino IDE Library Manager (see Dependencies).
 5. **Upload to your device** → run the example and try Virtual Shifting!
 
+## ⚠️ Disclaimer
+<details>
+<summary> 💡 <b>Research & Independence</b></summary>
+This project is <b>not affiliated with, endorsed by, or associated with any commercial virtual cycling platform or trainer manufacturer</b>. It is a <b>research and interoperability</b> initiative designed to explore <b>the increase of durability of legacy indoor bike trainers</b>. All development is conducted independently for <b>educational and experimental purposes</b>.
+</details>
+<details>
+<summary> ✅ <b>Compliance & Responsibility</b></summary> 
+This repository does <b>not include or promote any circumvention of technological protection measures</b>, reverse engineering of proprietary software, or unauthorized access to restricted systems. Users are <b>solely responsible</b> for ensuring that their use of this code complies with <b>local laws, software licenses, and platform terms of service</b>.
+</details>
+<details>
+<summary> 🔍 <b>Copyright & Contact</b></summary>
+If you are a <b>rights holder</b> and believe that this project includes content that <b>violates your intellectual property rights</b>, please <b>open an issue</b> on this repository to initiate a respectful review. We are committed to responding promptly and, if appropriate, taking corrective action.
+</details>
+
 ## ❤️ Contributing
 
 This project is just starting!
 If you’re interested in testing, coding, writing docs, or just giving feedback, contributions are welcome.
-
-## ⚠️ Disclaimer
-
-This is a community project and not affiliated with Tacx or Garmin.
-Use at your own risk.
 
 <details>
 <summary>⚖️ <b>Legal Notice (EU Context)</b></summary>
