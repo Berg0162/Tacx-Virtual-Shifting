@@ -80,6 +80,25 @@ Expected compatibility:
 
 ⚠️ If you test this on another model, please share your results in an issue so we can update the list.
 
+## 🔌 Tested Boards
+
+This project has been tested successfully with the following ESP32 development boards:  
+- **Seeed Studio XIAO ESP32S3**
+<img src="./media/XAIO_ESP32S3.png" width="300" height="300" ALIGN="left" alt="XIAO">
+<br clear="left">
+
+- **Adafruit Feather ESP32 V2**
+<img src="./media/Adafruit_Feather_ESP32_V2.png" width="300" height="300" ALIGN="left" alt="Feather">
+<br clear="left">
+
+Both boards work reliably with this project.  
+Each board has its own **setup instructions** in `/docs` to ensure correct pin configuration and library installation.
+- **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3_Sense.md)**
+- **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
+
+👉 Other ESP32-based boards may work as well, but are not officially tested yet.  
+If you try a different board, please share your results via an issue or pull request.  
+
 ## ⚡ Getting Started
 1. **Install Arduino IDE 2.x** → [Download here](https://www.arduino.cc/en/software).  
 2. Install the **Tacx-Virtual-Shifting** library from this repository. Download as `.zip` and extract to `Arduino/libraries` folder, or <br>in <b>Arduino IDE</b> from `Sketch menu` -> `Include library` -> `Add .Zip library`<br>
