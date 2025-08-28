@@ -1,6 +1,6 @@
-# Tacx-VirtualShifting based on the Adafruit Feather ESP32 V2 board
+# Tacx-Virtual-Shifting based on the Adafruit Feather ESP32 V2 board
 
-# Setup Feather ESP32 V2 for Tacx-VirtualShifting
+# Setup Feather ESP32 V2 for Tacx-Virtual-Shifting
 
 ## Arduino IDE 2.x
 The present code is developed on Arduino IDE 2.2. Notice that you will need an Arduino IDE that is tailored for this specific <b>Adafruit Feather ESP32 V2</b> processor! Please follow the installation instructions for the [Adafruit Feather ESP32 V2](https://learn.adafruit.com/adafruit-esp32-feather-v2/arduino-ide-setup)<br>
