@@ -18,7 +18,7 @@ At the very minimum, you need:
 
 👉 That’s it! No need for extra gadgets.  
 
-- **No Zwift Cog required** — just keep your bike chain in an optimal chain line, like in gear **34/17** or optimize sprocket position for your setup.  
+- **No Zwift Cog required** — just keep your bike chain in an optimal straight chain line, like in gear **34/17** or optimize chain position for your setup.  
 - **No Zwift Play required** — although it will likely work as well if you own one.  
 
 This project bridges your trainer and Zwift so that **pressing shift buttons on Zwift Click** feels like changing gears on a VS-enabled trainer.  
@@ -92,6 +92,7 @@ This project has been tested successfully with the following ESP32 development b
 <br clear="left">
 
 Both boards work reliably with this project. Check pricing and availability! 
+
 Each board has its own **setup instructions** in `/docs` to ensure correct pin configuration and library installation.
 - **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3_Sense.md)**
 - **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
