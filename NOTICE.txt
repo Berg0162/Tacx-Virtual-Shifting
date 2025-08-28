@@ -1,0 +1,14 @@
+Tacx-Virtual-Shifting
+Copyright 2025 Tacx-Virtual-Shifting contributors
+
+This project includes software from the NimBLE-Arduino project (Apache 2.0)
+https://github.com/h2zero/NimBLE-Arduino
+
+This project includes software from the uleb128 project (MIT License)
+https://github.com/bolderflight/uleb128
+
+This project includes code from the SHIFTR project (GPL-3.0 License) 
+https://github.com/JuergenLeber/SHIFTR
+
+This project includes code from the qdomyos-zwift project (GPL-3.0 License) 
+https://github.com/cagnulein/qdomyos-zwift
