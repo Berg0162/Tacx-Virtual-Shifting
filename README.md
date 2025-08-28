@@ -10,9 +10,23 @@ This feature is standard on newer Tacx trainers — but older models never recei
 
 **Goal:** Bring VS to legacy Tacx trainers so that cyclists can enjoy the benefits of shifting *without needing to buy new hardware*.  
 
+### 🔧 What do you need to try Virtual Shifting?
+At the very minimum, you need:  
+- A **Tacx smart trainer** (legacy model without VS support).  
+- A **Zwift Click device** (tested and working).  
+
+👉 That’s it! No need for extra gadgets.  
+
+- **No Zwift Cog required** — just keep your bike chain in gear **34/17** for the best simulation baseline.  
+- **No Zwift Play required** — although it will likely work as well if you own one.  
+
+This project bridges your trainer and Zwift so that **pressing shift buttons on Zwift Click** feels like changing gears on a VS-enabled trainer.  
+
+
 ## 🌟 Why this project?
-- Many Tacx smart trainers are still great but lack VS.  
-- Garmin/Tacx only enabled VS on selected newer models.  
+- Many Tacx smart trainers are still working great but lack VS.  
+- Garmin/Tacx enabled VS on selected new models.
+  - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
 - With a bit of software magic, we can unlock a similar experience.  
 - This repo provides **an Arduino library + concise examples** so you can try VS yourself.  
 
@@ -31,17 +45,23 @@ If you:
 You don’t need to hack the internals — just upload the example sketches and start experimenting.  
 
 ## 📚 Dependencies
+Hardware
++ **Supported MCU's** with **NimBLE-Arduino**
+    - Espressif: ESP32, ESP32C3, ESP32S3
 
-This library relies on the following Arduino libraries:
+This **Tacx-Virtual-Shifting** library relies on the following Arduino libraries:
++ Arduino core for ESP32
+  - [Arduino core for ESP32](https://github.com/espressif/arduino-esp32)
 
-NimBLE-Arduino (v2.x)
- → for Bluetooth Low Energy communication.
++ NimBLE-Arduino (v2.x) → for Bluetooth Low Energy communication.
+  - [NimBLE-Arduino version 2.x](https://github.com/h2zero/NimBLE-Arduino)
 
-Other supporting Arduino libraries (listed in library.properties / platformio.ini).
++ ULEB128 → Unsigned little endian base 128 implementation for encoding and decoding
+  - [uleb128](https://github.com/bolderflight/uleb128)
 
-You can install these directly through the Arduino IDE Library Manager or by cloning the repos.
+You can install these directly through the Arduino IDE Library Manager or by cloning the repos to your Arduino/libraries folder.
 
-## 🖥️ Supported Hardware
+## 🖥️ Supported Tacx Hardware
 
 This project is designed for legacy Tacx **smart** trainers that do not natively support VS.
 
@@ -58,16 +78,13 @@ Expected compatibility:
   - Satori Smart
   - and NEO
 
-
 ⚠️ If you test this on another model, please share your results in an issue so we can update the list.
 
 ## ⚡ Getting Started
 1. **Install Arduino IDE 2.x** → [Download here](https://www.arduino.cc/en/software).  
-2. **Clone this repo**:  
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/Tacx-Virtual-Shifting.git
+2. Install the **Tacx-Virtual-Shifting** library from this repository. Download as `.zip` and extract to `Arduino/libraries` folder, or <br>in <b>Arduino IDE</b> from `Sketch menu` -> `Include library` -> `Add .Zip library`<br>
 3. **Open Arduino IDE** → load the examples/ sketches.
-4. **Install required libraries** (see below).
+4. **Install required libraries** using Arduino IDE Library Manager (see Dependencies).
 5. **Upload to your device** → run the example and try Virtual Shifting!
 
 ## ❤️ Contributing
