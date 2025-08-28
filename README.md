@@ -18,7 +18,7 @@ At the very minimum, you need:
 
 👉 That’s it! No need for extra gadgets.  
 
-- **No Zwift Cog required** — just keep your bike chain in gear **34/17** for the best simulation baseline.  
+- **No Zwift Cog required** — just keep your bike chain in gear **34/17** or whatever is the optimal chain line.  
 - **No Zwift Play required** — although it will likely work as well if you own one.  
 
 This project bridges your trainer and Zwift so that **pressing shift buttons on Zwift Click** feels like changing gears on a VS-enabled trainer.  
