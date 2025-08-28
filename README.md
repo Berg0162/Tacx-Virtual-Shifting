@@ -26,8 +26,7 @@ This project is written with **novice programmers who are also cyclists** in min
 If you:  
 - Have a Tacx smart trainer,  
 - Are curious about VS,  
-- Know a little Arduino programming (or want to learn),  
-then this repo is for you. 🚀  
+- Know a little Arduino programming (or want to learn), then this repo is for you. 🚀  
 
 You don’t need to hack the internals — just upload the example sketches and start experimenting.  
 
@@ -46,17 +45,21 @@ You can install these directly through the Arduino IDE Library Manager or by clo
 
 This project is designed for legacy Tacx **smart** trainers that do not natively support VS.
 
-Tested so far:
+Tested so far on my own trainer:
 
-- Tacx Neo (T2800)
+- Tacx Neo (T2800) of the first generation (about september 2015).
 
 Expected compatibility:
+- Most **smart** Tacx FE-C compatible trainers without VS-enabled firmware like:
+  - Genius Smart,
+  - Bushido Smart,
+  - Vortex Smart,
+  - Flow Smart,
+  - Satori Smart
+  - and NEO
 
-- Tacx Flux S (T2900S)
-- Tacx Flux 2 (T2980)
-- Most **smart** Tacx FE-C compatible trainers without VS-enabled firmware.
 
-⚠️ If you test this on another model, please share your results in an issue or pull request so we can update the list.
+⚠️ If you test this on another model, please share your results in an issue so we can update the list.
 
 ## ⚡ Getting Started
 1. **Install Arduino IDE 2.x** → [Download here](https://www.arduino.cc/en/software).  
