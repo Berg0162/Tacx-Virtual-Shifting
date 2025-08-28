@@ -83,19 +83,18 @@ Expected compatibility:
 ## 🔌 Tested Boards
 
 This project has been tested successfully with the following ESP32 development boards:  
-
-- **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
-
-<img src="./media/Adafruit_Feather_ESP32_V2.png" width="300" height="300" ALIGN="left" alt="Feather">
-<br clear="left">
-
-- **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3_Sense.md)**
-
+- **Seeed Studio XIAO ESP32S3**
 <img src="./media/XAIO_ESP32S3.png" width="300" height="300" ALIGN="left" alt="XIAO">
 <br clear="left">
 
+- **Adafruit Feather ESP32 V2**
+<img src="./media/Adafruit_Feather_ESP32_V2.png" width="300" height="300" ALIGN="left" alt="Feather">
+<br clear="left">
+
 Both boards work reliably with this project.  
-Each board has its own **setup instructions** in `/docs` to ensure correct pin configuration and library installation.  
+Each board has its own **setup instructions** in `/docs` to ensure correct pin configuration and library installation.
+- **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3_Sense.md)**
+- **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
 
 👉 Other ESP32-based boards may work as well, but are not officially tested yet.  
 If you try a different board, please share your results via an issue or pull request.  
