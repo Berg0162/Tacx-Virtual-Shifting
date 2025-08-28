@@ -25,9 +25,9 @@ This project bridges your trainer and Zwift so that **pressing shift buttons on 
 
 ## 🌟 Why this project?
 - Many Tacx smart trainers are still working great but lack VS.  
-- Garmin/Tacx enabled VS on selected new models.
+- Garmin/Tacx enabled VS on **ONLY** selected new models.
   - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
-- With a bit of software magic, we can unlock a similar experience.  
+- At minimal cost this project can unlock a similar experience and increase the durability of your trainer. 
 - This repo provides **an Arduino library + concise examples** so you can try VS yourself.  
 
 ## 📦 What you’ll find here
