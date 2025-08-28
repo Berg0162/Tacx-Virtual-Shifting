@@ -90,8 +90,9 @@ This project has been tested successfully with the following ESP32 development b
 
   ![Adafruit Feather ESP32 V2](media/Adafruit_Feather_ESP32_V2.png)  
 
-- **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3_Sense.md)**  
-  ![XIAO ESP32S3](media/XAIO_ESP32S3.png)  
+- **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3_Sense.md)**
+
+<img src="./media/XAIO_ESP32S3.png" width="300" height="300" ALIGN="left" alt="XIAO">
 
 Both boards work reliably with this project.  
 Each board has its own **setup instructions** in `/docs` to ensure correct pin configuration and library installation.  
