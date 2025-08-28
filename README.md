@@ -84,7 +84,7 @@ Expected compatibility:
 
 This project has been tested successfully with the following ESP32 development boards:  
 
-- **[Adafruit Feather ESP32 V2](docs/feather_esp32v2.md)**  
+- **[Adafruit Feather ESP32 V2](docs/Adafruit Feather ESP32-V2.md)**  
   ![Adafruit Feather ESP32 V2](docs/images/feather_esp32v2.jpg)  
 
 - **[Seeed Studio XIAO ESP32S3](docs/xiao_esp32s3.md)**  
