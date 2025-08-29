@@ -119,6 +119,12 @@ This project builds on the work of several excellent open-source projects.
 
 Full attribution and license details are included in [NOTICE.txt](NOTICE.txt).  
 
+## ⚖️ License
+This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.  
+You may freely use, modify, and distribute this project, provided that any derivative work is also licensed under GPL-3.0.  
+
+See the [LICENSE](LICENSE) file for full details.
+
 ## ⚠️ Disclaimer
 
 <details>
