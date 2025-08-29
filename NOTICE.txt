@@ -1,5 +1,5 @@
 Tacx-Virtual-Shifting
-Copyright 2025 Tacx-Virtual-Shifting contributors
+Copyright (C) 2025 Tacx-Virtual-Shifting contributors
 
 This project includes software from the NimBLE-Arduino project (Apache 2.0)
 https://github.com/h2zero/NimBLE-Arduino
