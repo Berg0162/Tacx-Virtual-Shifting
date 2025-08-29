@@ -25,7 +25,7 @@ This project bridges your trainer and Zwift so that **pressing shift buttons on 
 
 ## 🌟 Why this project?
 - Many Tacx smart trainers are still working great but lack VS.
-- At minimal cost this project can unlock a similar experience and increase the durability of your trainer. 
+- At minimal cost this project can unlock a similar experience and extend the lifespan of your trainer. 
 - Garmin/Tacx has enabled VS on **ONLY** selected new models.
   - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
 - This repo provides **an Arduino library + concise examples** so you can try VS yourself.  
@@ -33,11 +33,11 @@ This project bridges your trainer and Zwift so that **pressing shift buttons on 
 ## 🛠 Who is this for?
 This project is written with **novice programmers who are also cyclists** in mind.  
 If you:  
-- Have a Tacx smart trainer,  
+- Have a Tacx smart trainer that is deprived of the Garmin/Tacx VS-enabling firmware update  
 - Are curious about VS,  
 - Know a little Arduino programming (or want to learn), then this repo is for you. 🚀  
 
-You don’t need to hack the internals — just upload the example sketches and start experimenting.  
+You don’t need to hack the internals — just upload the example sketche(s) and start experimenting.  
 
 ## 📦 What you’ll find here
 - **`/src`** → the C++ library (building blocks for VS).  
@@ -45,12 +45,12 @@ You don’t need to hack the internals — just upload the example sketches and 
 - **`/docs`** → background info, settings and troubleshooting.  
 
 ## 📚 Dependencies
-ESP32 MCU Hardware
+**ESP32 MCU Hardware**
 
 + **Supported MCU's** with **NimBLE-Arduino**
     - Espressif: ESP32, ESP32C3, ESP32S3
 
-Software
+**Software**
 
 This **Tacx-Virtual-Shifting** library relies on the following Arduino libraries:
 + Arduino core for ESP32
@@ -77,15 +77,14 @@ Expected compatibility:
   - Genius Smart,
   - Bushido Smart,
   - Vortex Smart,
-  - Flow Smart,
-  - Satori Smart
-  - and NEO
+  - Flow Smart and
+  - Satori Smart.
 
-⚠️ If you test this on another model, please share your results in an issue so we can update the list.
+⚠️ If you test this on another model than the Neo, please share your results in an issue.
 
 ## 🔌 Tested Boards
 
-This project has been tested successfully with the following ESP32 development boards:  
+This project has been tested successfully with the following ESP32 MCU boards:  
 - **Seeed Studio XIAO ESP32S3**
 <img src="./media/XAIO_ESP32S3.png" width="300" height="300" ALIGN="left" alt="XIAO">
 <br clear="left">
@@ -96,11 +95,11 @@ This project has been tested successfully with the following ESP32 development b
 
 Both boards work reliably with this project. Check pricing and availability! 
 
-Each board has its own **setup instructions** in `/docs` to ensure correct pin configuration and library installation.
+Each board has its own **setup instructions** in `/docs` to ensure correct configuration and library installation.
 - **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3_Sense.md)**
 - **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
 
-👉 Other ESP32-based boards may work as well, but are not tested yet.  
+👉 Other ESP32-based boards may work as well, but are not tested.  
 If you try a different board, please share your results via an issue.  
 
 ## ⚡ Getting Started
