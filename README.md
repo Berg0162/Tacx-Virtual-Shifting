@@ -108,6 +108,17 @@ If you try a different board, please share your results via an issue.
 5. **Setup `IDE` -> `Tools menu`** for the type of board you are using!
 6. **Upload to your device** → run the example and try Virtual Shifting!
 
+## 🙏 Credits
+
+This project builds on the work of several excellent open-source projects.  
+
+- **[NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino)** — Bluetooth Low Energy library (Apache 2.0 License)  
+- **[uleb128](https://github.com/bolderflight/uleb128)** — Unsigned LEB128 encoding/decoding (MIT License)  
+- **[SHIFTR](https://github.com/JuergenLeber/SHIFTR)** — Virtual shifting implementation (GPL-3.0 License)  
+- **[qdomyos-zwift](https://github.com/cagnulein/qdomyos-zwift)** — BLE-to-Zwift integration (GPL-3.0 License)  
+
+Full attribution and license details are included in [NOTICE.txt](NOTICE.txt).  
+
 ## ⚠️ Disclaimer
 
 <details>
