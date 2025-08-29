@@ -81,7 +81,7 @@ Expected compatibility:
   - Flow Smart and
   - Satori Smart.
 
-⚠️ If you test this on another model than the Neo, please share your results in an issue.
+⚠️ If you test this on another model than the Neo, please share your results in this [[Feedback Issue]](https://github.com/Berg0162/Tacx-Virtual-Shifting/issues/1#issue-3366715494).
 
 ## 🔌 Tested Boards
 
@@ -101,7 +101,7 @@ Each board has its own **setup instructions** in `/docs` to ensure correct confi
 - **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
 
 👉 Other ESP32-based boards may work as well, but are not tested.  
-If you try a different board, please share your results via an issue.  
+If you try a different board, please share your results via this [[Feedback Issue]](https://github.com/Berg0162/Tacx-Virtual-Shifting/issues/1#issue-3366715494).  
 
 ## ⚡ Getting Started
 1. **Install Arduino IDE 2.x** → [Download here](https://www.arduino.cc/en/software).  
@@ -151,7 +151,7 @@ Users are <b>solely responsible</b> for ensuring that their use of this code com
 <details>
 <summary>🔍 <b>Copyright & Contact</b></summary>
 
-If you are a <b>rights holder</b> and believe that this project includes content that <b>violates your intellectual property rights</b>, please <b>open an issue</b> on this repository to initiate a respectful review.  
+If you are a <b>rights holder</b> and believe that this project includes content that <b>violates your intellectual property rights</b>, please <b>open a new issue</b> on this repository to initiate a respectful review.  
 We are committed to responding promptly and, if appropriate, taking corrective action.  
 
 </details>
@@ -159,7 +159,7 @@ We are committed to responding promptly and, if appropriate, taking corrective a
 ## ❤️ Contributing
 
 This project is just starting!
-If you’re interested in testing, coding, writing docs, or just giving feedback, contributions are welcome.
+If you’re interested in testing, coding, writing docs, or just giving feedback, contributions are welcome. [Feedback Issue](https://github.com/Berg0162/Tacx-Virtual-Shifting/issues/1#issue-3366715494)
 
 <details>
 <summary>⚖️ <b>Legal Notice (EU Context)</b></summary>
