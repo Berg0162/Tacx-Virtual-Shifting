@@ -14,7 +14,7 @@ This feature is standard on newer Tacx trainers — but older models never recei
 At the very minimum, you need:  
 - A **Tacx smart trainer** (legacy model without VS support).  
 - A **Zwift Click device** (tested and working).
-    - The Click is handy because it can be moved around and mounted in different spots on the handlebars and elsewhere. Notice that these are also offered in online marketplaces now by people that have bought later a Zwift Play device.
+    - The Click is handy because it can be moved around and mounted in different spots on the handlebars and elsewhere. Notice that these are also offered in online marketplaces now, by people that have bought later a Zwift Play device.
 
 👉 That’s it! No need for extra gadgets.  
 
