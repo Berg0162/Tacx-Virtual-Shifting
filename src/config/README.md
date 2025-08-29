@@ -1,4 +1,4 @@
-# Central configuration Tacx-Virtual-Shifting
+# Central configuration of Tacx-Virtual-Shifting
 
 # configNimBLE.h
 Make configNimBLE.h settings to comply with your <b>Legacy Tacx FE-C</b> smart trainer.
