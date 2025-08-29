@@ -1,6 +1,6 @@
 # <img src="/media/ESP32_Icon.png" width="110" height="34" align="bottom" alt="ESP32 Icon"> Tacx-Virtual-Shifting
 
-** Virtual Shifting (VS) for Legacy Smart Tacx trainers that are deprived of the Tacx VS-enabling firmware update.**
+**Virtual Shifting (VS) for Legacy Smart Tacx trainers that are deprived of the Tacx VS-enabling firmware update.**
 
 ## 🚴 What is Virtual Shifting (VS)?
 Virtual Shifting lets you “change gears” on your smart trainer without touching your bike’s drivetrain.  
