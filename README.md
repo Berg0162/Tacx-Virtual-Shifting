@@ -1,6 +1,6 @@
-# <img src="/media/ESP32_Icon.png" width="110" height="34" align="bottom" alt="ESP32 Icon"> Tacx-Virtual-Shifting
+# <img src="/media/ESP32_Icon.png" width="110" height="34" align="bottom" alt="ESP32 Icon"> Tacx--Shifting
 
-**Virtual Shifting (VS) for Legacy Smart Tacx trainers that are deprived of the Tacx VS-enabling firmware update.**
+** Virtual Shifting (VS) for Legacy Smart Tacx trainers that are deprived of the Tacx VS-enabling firmware update.**
 
 ## 🚴 What is Virtual Shifting (VS)?
 Virtual Shifting lets you “change gears” on your smart trainer without touching your bike’s drivetrain.  
@@ -112,7 +112,7 @@ If you try a different board, please share your results via this [[Feedback Issu
 6. **Upload to your device** → run the example and try Virtual Shifting!
 
 ## 🪄 Central configuration
-All configuration settings have been gathered in one config directory `../documents/arduino/libaries/TacxVirtualShifting/src/config` for <b>Debug</b>-, <b>NimBLE</b>- and <b>Tacx</b>-configurations. Check this out: [Configuring Tacx-Virtual-Shifting](src/config/README.md)<br>
+All configuration settings have been gathered in one config directory `../documents/arduino/libaries/Tacx-Virtual-Shifting/src/config` for <b>Debug</b>-, <b>NimBLE</b>- and <b>Tacx</b>-configurations. Check this out: [Configuring Tacx-Virtual-Shifting](src/config/README.md)<br>
 
 ## 🙏 Credits
 This project builds on the work of several excellent open-source projects.  
@@ -134,7 +134,7 @@ See the [LICENSE](LICENSE) file for full details.
 <details>
 <summary>💡 <b>Research & Independence</b></summary>
 
-This project is <b>not affiliated with, endorsed by, or associated with any commercial virtual cycling platform or trainer manufacturer</b>.  
+This project is <b>not affiliated with, endorsed by, or associated with any commercial  cycling platform or trainer manufacturer</b>.  
 It is a <b>research and interoperability</b> initiative designed to explore ways to <b>increase the durability of legacy indoor bike trainers</b>.  
 All development is conducted independently for <b>educational and experimental purposes</b>.  
 
@@ -159,7 +159,7 @@ We are committed to responding promptly and, if appropriate, taking corrective a
 ## ❤️ Contributing
 
 This project is just starting!
-If you’re interested in testing, coding, writing docs, or just giving feedback, contributions are welcome. [Feedback Issue](https://github.com/Berg0162/Tacx-Virtual-Shifting/issues/1#issue-3366715494)
+If you’re interested in testing, coding, writing docs, or just giving feedback, contributions are welcome. [Feedback Issue](https://github.com/Berg0162/Tacx--Shifting/issues/1#issue-3366715494)
 
 <details>
 <summary>⚖️ <b>Legal Notice (EU Context)</b></summary>
