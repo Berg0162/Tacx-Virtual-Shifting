@@ -31,7 +31,7 @@ This project bridges your trainer and Zwift so that **pressing shift buttons on 
 - This repo provides **an Arduino library + concise examples** so you can try VS yourself.  
 
 ## 🛠 Who is this for?
-This project is written with **novice programmers who are also cyclists** in mind.  
+This project is written with **(novice) programmers who are also cyclists** in mind.  
 If you:  
 - Have a Tacx smart trainer that is deprived of the Garmin/Tacx VS-enabling firmware update  
 - Are curious about VS,  
