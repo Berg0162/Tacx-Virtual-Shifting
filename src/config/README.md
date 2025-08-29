@@ -44,7 +44,7 @@ Make configTacx.h settings to comply with your <b>Legacy Tacx FE-C</b> smart tra
 
 + Open file, edit and save(!): `/documents/arduino/libraries/TacxVirtualShifting/src/config/configTacx.h`
 
-+ Set your <b>Tacx</b>-configuration for use with <b>TacxVirtualShifing</b>:
++ Set your <b>Tacx</b>-configuration for use with <b>Tacx-Virtual-Shifting</b>:
 
 ```C++
 //-------------------------------------------------------------------------------------------
