@@ -112,7 +112,7 @@ If you try a different board, please share your results via this [[Feedback Issu
 6. **Upload to your device** → run the example and try Virtual Shifting!
 
 ## 🪄 Central configuration
-All configuration settings have been gathered in one config directory `../documents/arduino/libaries/TacxVirtualShifting/src/config` for <b>Debug</b>-, <b>NimBLE</b>- and <b>Tacx</b>-configurations. Check this out:  [TacxVirtualShifting Configuration](src/config/README.md)<br>
+All configuration settings have been gathered in one config directory `../documents/arduino/libaries/TacxVirtualShifting/src/config` for <b>Debug</b>-, <b>NimBLE</b>- and <b>Tacx</b>-configurations. Check this out: [Configuring Tacx-Virtual-Shifting](src/config/README.md)<br>
 
 ## 🙏 Credits
 This project builds on the work of several excellent open-source projects.  
