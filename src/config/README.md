@@ -1,9 +1,9 @@
-# Central configuration
+# Central configuration Tacx-Virtual-Shifting
 
 # configNimBLE.h
 Make configNimBLE.h settings to comply with your <b>Legacy Tacx FE-C</b> smart trainer.
 
-+ Open file, edit and save(!): `/documents/arduino/libraries/TacxVirtualShifting/src/config/configNimBLE.h`
++ Open file, edit and save(!): `/documents/arduino/libraries/Tacx-Virtual-Shifting/src/config/configNimBLE.h`
 
 Tacx-Virtual-Shifting <b>NimBLE-Arduino</b> configuration options:
 ```C++
@@ -27,7 +27,7 @@ Tacx-Virtual-Shifting has a fine-grained scheme for allowing debug-messages duri
 
 Make configDEBUG.h settings to comply with the status of your <b>Tacx-Virtual-Shifting</b> setup.
 
-+ Open file, edit and save(!): `/documents/arduino/libraries/TacxVirtualShifting/src/config/configDEBUG.h`
++ Open file, edit and save(!): `/documents/arduino/libraries/Tacx-Virtual-Shifting/src/config/configDEBUG.h`
 
 Tacx-Virtual-Shifting <b>Debug</b> configuration options:
 
@@ -42,7 +42,7 @@ Tacx-Virtual-Shifting <b>Debug</b> configuration options:
 # configTacx.h
 Make configTacx.h settings to comply with your <b>Legacy Tacx FE-C</b> smart trainer.
 
-+ Open file, edit and save(!): `/documents/arduino/libraries/TacxVirtualShifting/src/config/configTacx.h`
++ Open file, edit and save(!): `/documents/arduino/libraries/Tacx-Virtual-Shifting/src/config/configTacx.h`
 
 + Set your <b>Tacx</b>-configuration for use with <b>Tacx-Virtual-Shifting</b>:
 
