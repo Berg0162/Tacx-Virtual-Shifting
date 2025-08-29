@@ -97,7 +97,7 @@ This project has been tested successfully with the following ESP32 MCU boards:
 Both boards work reliably with this project. Check pricing and availability! 
 
 Each board has its own **setup instructions** in `/docs` to ensure correct configuration and library installation.
-- **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3_Sense.md)**
+- **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3.md)**
 - **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
 
 👉 Other ESP32-based boards may work as well, but are not tested.  
