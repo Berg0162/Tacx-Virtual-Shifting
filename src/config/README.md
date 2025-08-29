@@ -5,7 +5,7 @@ Make configNimBLE.h settings to comply with your <b>Legacy Tacx FE-C</b> smart t
 
 + Open file, edit and save(!): `/documents/arduino/libraries/TacxVirtualShifting/src/config/configNimBLE.h`
 
-TacxVirtualShifting <b>NimBLE-Arduino</b> configuration options:
+Tacx-Virtual-Shifting <b>NimBLE-Arduino</b> configuration options:
 ```C++
 // ---------------------------------------------------------------------------------------
 // Training Apps set MTU after connection from 23 to 255, this allows for max data throughput!
@@ -70,4 +70,4 @@ Make configTacx.h settings to comply with your <b>Legacy Tacx FE-C</b> smart tra
 #define DEFAULTGEARRATIO 2.4  // Default gear ratio of the bike (chainring / sprocket)
 ```
 
-<b>Warning</b>: When a new version of Tacx-Virtual-Shifting is installed in Arduino IDE 2 it will override <b>ALL</b> files of a previous version! If you have made modifications in a file that is part of `TacxVirtualShifting` --> <b>Make</b> a <b>copy</b> of the file(s) in question <b>BEFORE</b> you <b>install</b> a new library version!
+<b>Warning</b>: When a new version of Tacx-Virtual-Shifting is installed in Arduino IDE 2 it will override <b>ALL</b> files of a previous version! If you have made modifications in a file that is part of `Tacx-Virtual-Shifting` --> <b>Make</b> a <b>copy</b> of the file(s) in question <b>BEFORE</b> you <b>install</b> a new library version!
