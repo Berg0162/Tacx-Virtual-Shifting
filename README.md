@@ -1,4 +1,4 @@
-# <img src="/media/ESP32_Icon.png" width="110" height="34" align="bottom" alt="ESP32 Icon"> Tacx--Shifting
+# <img src="/media/ESP32_Icon.png" width="110" height="34" align="bottom" alt="ESP32 Icon"> Tacx-Virtual-Shifting
 
 ** Virtual Shifting (VS) for Legacy Smart Tacx trainers that are deprived of the Tacx VS-enabling firmware update.**
 
@@ -10,7 +10,7 @@ This feature is standard on newer Tacx trainers — but older models never recei
 
 **Goal:** Bring VS to legacy Tacx trainers so that cyclists can experience the benefits of virtual shifting *without needing to buy new trainer hardware*.  
 
-### 🔧 What do you need to try Virtual Shifting?
+## 🔧 What do you need to try Virtual Shifting?
 At the very minimum, you need:  
 - A **Tacx smart trainer** (legacy model without VS support).  
 - A **Zwift Click device** (tested and working).
