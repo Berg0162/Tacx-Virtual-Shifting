@@ -18,22 +18,22 @@ At the very minimum, you need:
 
 👉 That’s it! No need for extra gadgets.  
 
-- **No Zwift Cog required** — just keep your bike chain in an optimal straight chain line, like in gear **34/17** or optimize chain position for your setup.  
+- **No Zwift Cog required** — align your bike chain in an optimal straight line, like in gear **34/17**. 
 - **No Zwift Play required** — although it will likely work as well if you own one.  
 
 This project bridges your trainer and Zwift so that **pressing shift buttons on Zwift Click** feels like changing gears on a VS-enabled trainer.  
 
 ## 🌟 Why this project?
-- Many Tacx smart trainers are still working great but lack VS.  
-- Garmin/Tacx enabled VS on **ONLY** selected new models.
-  - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
+- Many Tacx smart trainers are still working great but lack VS.
 - At minimal cost this project can unlock a similar experience and increase the durability of your trainer. 
+- Garmin/Tacx has enabled VS on **ONLY** selected new models.
+  - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
 - This repo provides **an Arduino library + concise examples** so you can try VS yourself.  
 
 ## 📦 What you’ll find here
 - **`/src`** → the C++ library (building blocks for VS).  
 - **`/examples`** → ready-to-run demos showing how to connect and shift.  
-- **`/docs`** → background info on Tacx protocols, VS concepts, and troubleshooting.  
+- **`/docs`** → background info, settings and troubleshooting.  
 
 ## 🛠 Who is this for?
 This project is written with **novice programmers who are also cyclists** in mind.  
@@ -45,9 +45,12 @@ If you:
 You don’t need to hack the internals — just upload the example sketches and start experimenting.  
 
 ## 📚 Dependencies
-Hardware
+MCU Hardware
+
 + **Supported MCU's** with **NimBLE-Arduino**
     - Espressif: ESP32, ESP32C3, ESP32S3
+
+Software
 
 This **Tacx-Virtual-Shifting** library relies on the following Arduino libraries:
 + Arduino core for ESP32
@@ -111,11 +114,10 @@ If you try a different board, please share your results via an issue.
 ## 🙏 Credits
 
 This project builds on the work of several excellent open-source projects.  
-
-- **[NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino)** — Bluetooth Low Energy library (Apache 2.0 License)  
-- **[uleb128](https://github.com/bolderflight/uleb128)** — Unsigned LEB128 encoding/decoding (MIT License)  
 - **[SHIFTR](https://github.com/JuergenLeber/SHIFTR)** — BLE to Direct Connect bridge for bike trainers adding virtual shifting for Zwift (GPL-3.0 License)  
 - **[qdomyos-zwift](https://github.com/cagnulein/qdomyos-zwift)** — Zwift bridge for smart treadmills and bike/cyclette (GPL-3.0 License)  
+- **[NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino)** — Bluetooth Low Energy library (Apache 2.0 License)  
+- **[uleb128](https://github.com/bolderflight/uleb128)** — Unsigned LEB128 encoding/decoding (MIT License)  
 
 Full attribution and license details are included in [NOTICE.txt](NOTICE.txt).  
 
