@@ -110,8 +110,10 @@ If you try a different board, please share your results via an issue.
 5. **Setup `IDE` -> `Tools menu`** for the type of board you are using!
 6. **Upload to your device** → run the example and try Virtual Shifting!
 
-## 🙏 Credits
+## Central configuration
+All configuration settings have been gathered in one config directory `../documents/arduino/libaries/TacxVirtualShifting/src/config` for <b>Debug</b>-, <b>NimBLE</b>- and <b>Tacx</b>-configurations. Check this out:  [TacxVirtualShifting Configuration](src/config/README.md)<br>
 
+## 🙏 Credits
 This project builds on the work of several excellent open-source projects.  
 - **[SHIFTR](https://github.com/JuergenLeber/SHIFTR)** — BLE to Direct Connect bridge for bike trainers adding virtual shifting for Zwift (GPL-3.0 License)  
 - **[qdomyos-zwift](https://github.com/cagnulein/qdomyos-zwift)** — Zwift bridge for smart treadmills and bike/cyclette (GPL-3.0 License)  
