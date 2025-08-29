@@ -40,9 +40,10 @@ If you:
 You don’t need to hack the internals — just upload the example sketche(s) and start experimenting.  
 
 ## 📦 What you’ll find here
-- **`/src`** → the C++ library (building blocks for VS).  
+- **`/src`** → the C++ library (building blocks for VS).
+- **`/src/config`** → configuration settings
 - **`/examples`** → ready-to-run demos showing how to connect and shift.  
-- **`/docs`** → background info, settings and troubleshooting.  
+- **`/docs`** → background info and board setup.  
 
 ## 📚 Dependencies
 **ESP32 MCU Hardware**
