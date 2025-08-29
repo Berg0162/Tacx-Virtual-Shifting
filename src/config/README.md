@@ -23,18 +23,18 @@ const uint16_t AdvertiseMaxInterval = 240;	// 150ms (240 * 0.625ms)
 ```
 
 # configDebug.h
-TacxVirtualShifting has a fine-grained scheme for allowing debug-messages during operation. Every `/src/<file name>.cpp` has its own <b>#define DEBUG</b> at the beginning of the code that can be (un)commented (switched on or off) discretionary. However, when one reaches the state that debugging has no longer a purpose, you want to get rid of all the overhead (processor load) and optimise for speed. This `configDebug.h` allows you to switch OFF in one place <b>all TacxVirtualShifting debugging messages</b> with one <b>master switch</b>.<br>
+Tacx-Virtual-Shifting has a fine-grained scheme for allowing debug-messages during operation. Every `/src/<file name>.cpp` has its own <b>#define DEBUG</b> at the beginning of the code that can be (un)commented (switched on or off) discretionary. However, when one reaches the state that debugging has no longer a purpose, you want to get rid of all the overhead (processor load) and optimise for speed. This `configDebug.h` allows you to switch OFF in one place <b>all Tacx-Virtual-Shifting debugging messages</b> with one <b>master switch</b>.<br>
 
-Make configDEBUG.h settings to comply with the status of your <b>TacxVirtualShifting</b> setup.
+Make configDEBUG.h settings to comply with the status of your <b>Tacx-Virtual-Shifting</b> setup.
 
 + Open file, edit and save(!): `/documents/arduino/libraries/TacxVirtualShifting/src/config/configDEBUG.h`
 
-TacxVirtualShifting <b>Debug</b> configuration options:
+Tacx-Virtual-Shifting <b>Debug</b> configuration options:
 
 ```C++
 // ------------------------------------------------------------------------------------------------
 // COMPILER DIRECTIVE to allow/suppress ALL DEBUG messages that help to debug code sections
-// Uncomment general "#define GLOBAL_DEBUG" to activate the TacxVirtualShifting debug master switch...
+// Uncomment general "#define GLOBAL_DEBUG" to activate the Tacx-Virtual-Shifting debug master switch...
 #define GLOBAL_DEBUG
 
 ```
@@ -70,4 +70,4 @@ Make configTacx.h settings to comply with your <b>Legacy Tacx FE-C</b> smart tra
 #define DEFAULTGEARRATIO 2.4  // Default gear ratio of the bike (chainring / sprocket)
 ```
 
-<b>Warning</b>: When a new version of TacxVirtualShifting is installed in Arduino IDE 2 it will override <b>ALL</b> files of a previous version! If you have made modifications in a file that is part of `TacxVirtualShifting` --> <b>Make</b> a <b>copy</b> of the file(s) in question <b>BEFORE</b> you <b>install</b> a new library version!
+<b>Warning</b>: When a new version of Tacx-Virtual-Shifting is installed in Arduino IDE 2 it will override <b>ALL</b> files of a previous version! If you have made modifications in a file that is part of `TacxVirtualShifting` --> <b>Make</b> a <b>copy</b> of the file(s) in question <b>BEFORE</b> you <b>install</b> a new library version!
