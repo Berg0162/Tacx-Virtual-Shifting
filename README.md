@@ -18,7 +18,7 @@ At the very minimum, you need:
 
 👉 That’s it! No need for extra gadgets.  
 
-- **No Zwift Cog required** — align your bike chain in an optimal straight line, like in gear **34/17**. 
+- **No Zwift Cog required** — just align your bike chain in an optimal straight line, like in gear **34/17**. 
 - **No Zwift Play required** — although it will likely work as well if you own one.  
 
 This project bridges your trainer and Zwift so that **pressing shift buttons on Zwift Click** feels like changing gears on a VS-enabled trainer.  
@@ -30,11 +30,6 @@ This project bridges your trainer and Zwift so that **pressing shift buttons on 
   - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
 - This repo provides **an Arduino library + concise examples** so you can try VS yourself.  
 
-## 📦 What you’ll find here
-- **`/src`** → the C++ library (building blocks for VS).  
-- **`/examples`** → ready-to-run demos showing how to connect and shift.  
-- **`/docs`** → background info, settings and troubleshooting.  
-
 ## 🛠 Who is this for?
 This project is written with **novice programmers who are also cyclists** in mind.  
 If you:  
@@ -44,8 +39,13 @@ If you:
 
 You don’t need to hack the internals — just upload the example sketches and start experimenting.  
 
+## 📦 What you’ll find here
+- **`/src`** → the C++ library (building blocks for VS).  
+- **`/examples`** → ready-to-run demos showing how to connect and shift.  
+- **`/docs`** → background info, settings and troubleshooting.  
+
 ## 📚 Dependencies
-MCU Hardware
+ESP32 MCU Hardware
 
 + **Supported MCU's** with **NimBLE-Arduino**
     - Espressif: ESP32, ESP32C3, ESP32S3
