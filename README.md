@@ -114,8 +114,8 @@ This project builds on the work of several excellent open-source projects.
 
 - **[NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino)** — Bluetooth Low Energy library (Apache 2.0 License)  
 - **[uleb128](https://github.com/bolderflight/uleb128)** — Unsigned LEB128 encoding/decoding (MIT License)  
-- **[SHIFTR](https://github.com/JuergenLeber/SHIFTR)** — Virtual shifting implementation (GPL-3.0 License)  
-- **[qdomyos-zwift](https://github.com/cagnulein/qdomyos-zwift)** — BLE-to-Zwift integration (GPL-3.0 License)  
+- **[SHIFTR](https://github.com/JuergenLeber/SHIFTR)** — BLE to Direct Connect bridge for bike trainers adding virtual shifting for Zwift (GPL-3.0 License)  
+- **[qdomyos-zwift](https://github.com/cagnulein/qdomyos-zwift)** — Zwift bridge for smart treadmills and bike/cyclette (GPL-3.0 License)  
 
 Full attribution and license details are included in [NOTICE.txt](NOTICE.txt).  
 
