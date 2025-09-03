@@ -21,7 +21,10 @@ At the very minimum, you need:
 - **No Zwift Cog required** — just align your bike chain in an optimal straight line, like in gear **34/17**. 
 - **No Zwift Play required** — although it will likely work as well if you own one.  
 
-This project bridges your trainer and Zwift so that **pressing shift buttons on Zwift Click** feels like changing gears on a VS-enabled trainer.  
+This project bridges your trainer and Zwift so that **pressing shift buttons on Zwift Click** feels like changing gears on a VS-enabled trainer. 
+
+> **Note:** This bridge only controls trainer resistance.  
+> It does not modify or fake your power, cadence, heart rate, or Zwift ride data in any way.
 
 ## 🌟 Why this project?
 - Many Tacx smart trainers are still working great but lack VS.
