@@ -46,7 +46,77 @@ You don’t need to hack the internals — just upload the example sketche(s) an
 - **`/src`** → the C++ library (building blocks for VS).
 - **`/src/config`** → configuration settings
 - **`/examples`** → ready-to-run demos showing how to connect and shift.  
-- **`/docs`** → background info and board setup.  
+- **`/docs`** → background info and board setup.
+- 
+## How the code works?
+At its core, this project acts as a **bridge** between Zwift Virtual Shifting (VS) and the legacy smart Tacx trainer.  
+Zwift sends commands over BLE in formats that the smart Tacx does not natively understand. The bridge intercepts these commands, interprets whether Zwift is asking for a target power, a road gradient, or a virtual gear change, and then translates them into the **ANT+ FE-C messages** that the trainer *does* support.  
+In this way, the legacy smart Tacx trainer behaves as if it had native Zwift VS support, even though its firmware was never updated for it.
+
+<details>
+<summary><b>Supported Trainer Modes</b></summary>
+
+The bridge implements three distinct modes that mirror how Zwift communicates with smart trainers.  
+Which mode is active is not set explicitly by Zwift, but is inferred from the type of data Zwift VS sends.
+
+- **ERG_MODE**  
+  When Zwift sends a *Target Power* command (e.g. during a workout block in a `.zwo` file), the bridge switches into ERG mode.  
+  In this mode the trainer is controlled purely by power targets: the smart Tacx is instructed to hold the requested wattage, regardless of cadence, speed, or gear.
+
+- **SIM_MODE**  
+  When Zwift sends a *grade value* (`zwiftGrade`) without virtual shifting active, the bridge passes this value directly on to the trainer using the FE-C Track Resistance page.  
+  The trainer then applies resistance according to the simulated slope, just like in a normal Zwift ride without VS enabled.
+
+- **SIM_MODE + Virtual Shifting**  
+  When Zwift VS sends a non-zero *gear ratio*, the bridge switches into Virtual Shifting mode.  
+  Here the raw grade from Zwift is not used directly; instead, the bridge calculates an *effective grade* that takes into account the rider’s cadence, the chosen virtual gear ratio, total weight and resistance forces.  
+  This reconstructed grade is then sent as FE-C Track Resistance, making the smart Tacx behave as if it natively supported Zwift’s virtual gearing.
+
+In short:  
+- **Target Power received → ERG mode**  
+- **Grade received without gear ratio → SIM mode**  
+- **Gear ratio received → Virtual Shifting mode**  
+
+This automatic detection ensures that the smart Tacx follows Zwift’s logic seamlessly, even though it never received official firmware support for Virtual Shifting.
+</details>
+
+<details>
+<summary> <b>How is Tacx FEC Track Resistance Grade calculated?</b></summary>
+
+The workhorse function that does the core of the calculations, sits at the heart of the ESP32 Virtual Shifting → smart Tacx bridge. The function/member is a.k.a. UTILS::calculateFECTrackResistanceGrade(..) and can be found for further inspection at `/src/utilities.cpp`.
+Its role is to take the information Zwift VS provides — **gear ratio**, **grade**, **rider and bike weight**, **CRR** and **Cw** — and translate it into something the smart Tacx understands: an ANT+ FE-C Track Resistance grade.
+
+The calculation begins by applying two kinds of speed. On the one hand we have the **virtual Speed**, which is derived from the rider’s cadence, the selected virtual gear ratio, and the assumed wheel diameter. This represents how fast the bike *would* be going out on the road. On the other hand, there is the **measured Speed** reported by the trainer’s flywheel. This represents what the trainer is actually doing at that moment. These two speeds form the basis for all subsequent resistance forces.
+
+From there, the function reconstructs the three major forces acting on a rider in Zwift’s simulation:
+
+- **Rolling resistance**, which depends only on the total system weight and remains fairly constant.
+- **Wind resistance**, which Zwift models based purely on the rider’s speed through the air. Since Zwift itself does not add random wind gusts for solo riding, the calculation uses the measured speed reported by the trainer.
+- **Gravitational resistance**, which is where the magic of virtual shifting comes in. Using the virtual speed, the rider’s total weight, and the grade supplied by Zwift, the function determines how much of the resistance should come from climbing or descending.
+
+All three contributions are added together and compared against the theoretical resistance one would expect from riding a given slope outdoors. From this, the function reconstructs an **effective gradient** — essentially the slope that best explains the resistance forces the rider should be feeling under Zwift’s physics model. This effective gradient is then encoded into FE-C Track Resistance format, where `0x4E20` represents a flat road, and each step corresponds to 0.01% grade.
+
+A few safeguards ensure that the ride feels natural. Zwift already halves downhill grades before sending them to the trainer, so the function does not apply any further scaling — avoiding the pitfall of double-reducing descents. Likewise, extreme slopes are clipped to a realistic range of ±25%, which prevents sudden spikes in resistance and keeps the trainer within its mechanical limits.
+
+The end result is that, whether the rider is shifting gears, rolling down a virtual hill, or grinding up Alpe du Zwift, the smart Tacx receives a smooth and believable track resistance signal. The trainer “thinks” it is simply following a gradient profile, while in reality it is being fed a carefully reconstructed version of Zwift’s virtual world.
+</details>
+
+<details>
+<summary> <b>Accuracy and Transparency</b></summary>
+
+A common concern when using a bridge or simulation algorithm is whether it might interfere with the key performance data that Zwift displays: **power, cadence, heart rate, and speed**.  
+It is important to stress that this project does **not** alter or fabricate any of these values.
+
+- **Power and cadence** are always measured directly by the smart Tacx trainer and reported unchanged to Zwift.  
+- **Heart rate** is passed through directly from your sensor without modification.  
+- **Speed** as shown in Zwift is determined by Zwift’s own physics engine (road gradient, drafting, and rider profile), not by the bridge.  
+
+What the bridge does is limited to **resistance control only**: it translates Zwift’s Virtual Shifting and gradient commands into ANT+ FE-C messages that the smart Tacx can understand.  
+This affects how the trainer feels under your legs, but never the numbers that Zwift records or displays.
+
+In short:  
+The bridge makes your smart Tacx respond correctly to Zwift VS commands, but your power output and ride data remain 100% authentic and untouched.
+</details>
 
 ## 📚 Dependencies
 **ESP32 MCU Hardware**
