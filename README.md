@@ -81,9 +81,9 @@ This automatic detection ensures that the smart Tacx follows Zwift’s logic sea
 </details>
 
 <details>
-<summary> <b>How is Tacx FEC Track Resistance Grade calculated?</b></summary>
+<summary><b>How is Tacx FEC Track Resistance Grade calculated?</b></summary>
 
-The workhorse function that does the core of the calculations, sits at the heart of the ESP32 Virtual Shifting → smart Tacx bridge. The function/member is a.k.a. UTILS::calculateFECTrackResistanceGrade(..) and can be found for further inspection at `/src/utilities.cpp`.
+The workhorse function that does the core of the calculations, sits at the heart of the ESP32 Virtual Shifting → smart Tacx bridge. The function/member is a.k.a. `UTILS::calculateFECTrackResistanceGrade(..)` and can be found for further inspection at `/src/utilities.cpp`.
 Its role is to take the information Zwift VS provides — **gear ratio**, **grade**, **rider and bike weight**, **CRR** and **Cw** — and translate it into something the smart Tacx understands: an ANT+ FE-C Track Resistance grade.
 
 The calculation begins by applying two kinds of speed. On the one hand we have the **virtual Speed**, which is derived from the rider’s cadence, the selected virtual gear ratio, and the assumed wheel diameter. This represents how fast the bike *would* be going out on the road. On the other hand, there is the **measured Speed** reported by the trainer’s flywheel. This represents what the trainer is actually doing at that moment. These two speeds form the basis for all subsequent resistance forces.
