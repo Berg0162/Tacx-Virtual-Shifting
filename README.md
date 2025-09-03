@@ -48,7 +48,7 @@ You don’t need to hack the internals — just upload the example sketche(s) an
 - **`/examples`** → ready-to-run demos showing how to connect and shift.  
 - **`/docs`** → background info and board setup.
 - 
-## How the code works?
+## 🪄 How the code works?
 At its core, this project acts as a **bridge** between Zwift Virtual Shifting (VS) and the legacy smart Tacx trainer.  
 Zwift sends commands over BLE in formats that the smart Tacx does not natively understand. The bridge intercepts these commands, interprets whether Zwift is asking for a target power, a road gradient, or a virtual gear change, and then translates them into the **ANT+ FE-C messages** that the trainer *does* support.  
 In this way, the legacy smart Tacx trainer behaves as if it had native Zwift VS support, even though its firmware was never updated for it.
