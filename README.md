@@ -233,7 +233,7 @@ void setup() {
   while(!BLEmanager->clientIsConnected) {
     delay(100);
     if(millis() > TIMEOUT) {
-      //LOG(">>> Scanning for Peripheral/Trainer --> Timeout!");
+      LOG(">>> Scanning for Peripheral/Trainer --> Timeout!");
       break;
     }
   }
