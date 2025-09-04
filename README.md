@@ -204,7 +204,6 @@ See the [LICENSE](LICENSE) file for full details.
 
 ## 🔧 Basic Usage
 ```C++
-// --------------------------------------------------------------------------------------------
 #include <TacxVirtualShifting.h>
 
 void setup() {
