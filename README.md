@@ -1,6 +1,6 @@
 # <img src="/media/ESP32_Icon.png" width="110" height="34" align="bottom" alt="ESP32 Icon"> Tacx-Virtual-Shifting
 
-**Virtual Shifting (VS) for Legacy Smart Tacx trainers that are deprived of the Tacx VS-enabling firmware update.**
+**Virtual Shifting (VS) for Legacy Smart Tacx trainers, that are deprived of the Tacx VS-enabling firmware update.**
 
 ## 🚴 What is Virtual Shifting (VS)?
 Virtual Shifting lets you “change gears” on your smart trainer without touching your bike’s drivetrain.  
@@ -27,7 +27,7 @@ This project bridges your trainer and Zwift so that **pressing shift buttons on 
 > It does not modify or fake your power, cadence, heart rate, or Zwift ride data in any way.
 
 ## 🌟 Why this project?
-- Many Tacx smart trainers are still working great but lack VS.
+- Many Tacx smart trainers are still working great but lack VS support.
 - At minimal cost this project can unlock a similar experience and extend the lifespan of your trainer. 
 - Garmin/Tacx has enabled VS on **ONLY** selected new models.
   - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
