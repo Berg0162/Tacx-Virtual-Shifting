@@ -202,6 +202,10 @@ You may freely use, modify, and distribute this project, provided that any deriv
 
 See the [LICENSE](LICENSE) file for full details.
 
+## 🔧 Basic Usage
+```C++
+```
+
 ## ⚠️ Disclaimer
 
 <details>
