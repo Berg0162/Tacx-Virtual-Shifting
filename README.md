@@ -54,7 +54,7 @@ Zwift sends commands over BLE in formats that the smart Tacx does not natively u
 In this way, the legacy smart Tacx trainer behaves as if it had native Zwift VS support, even though its firmware was never updated for it.
 
 <details>
-<summary><b>Supported Trainer Modes</b></summary>
+<summary><b>🚴 Supported Trainer Modes</b></summary>
 
 The bridge implements three distinct modes that mirror how Zwift communicates with smart trainers.  
 Which mode is active is not set explicitly by Zwift, but is inferred from the type of data Zwift VS sends.
@@ -81,7 +81,7 @@ This automatic detection ensures that the smart Tacx follows Zwift’s logic sea
 </details>
 
 <details>
-<summary><b>How is Tacx FEC Track Resistance Grade calculated?</b></summary>
+<summary><b>📐 How is Tacx FEC Track Resistance Grade calculated?</b></summary>
 
 The workhorse function that does the core of the calculations, sits at the heart of the ESP32 Virtual Shifting → smart Tacx bridge. The function/member is a.k.a. `UTILS::calculateFECTrackResistanceGrade(..)` and can be found for further inspection at `/src/utilities.cpp`.
 Its role is to take the information Zwift VS provides — **gear ratio**, **grade**, **rider and bike weight**, **CRR** and **Cw** — and translate it into something the smart Tacx understands: an ANT+ FE-C Track Resistance grade.
@@ -102,7 +102,7 @@ The end result is that, whether the rider is shifting gears, rolling down a virt
 </details>
 
 <details>
-<summary> <b>Accuracy and Transparency</b></summary>
+<summary> <b>🔒 Accuracy and Transparency</b></summary>
 
 A common concern when using a bridge or simulation algorithm is whether it might interfere with the key performance data that Zwift displays: **power, cadence, heart rate, and speed**.  
 It is important to stress that this project does **not** alter or fabricate any of these values.
