@@ -206,22 +206,7 @@ See the [LICENSE](LICENSE) file for full details.
 ```C++
 #include <TacxVirtualShifting.h>
 
-void setup() {
-#ifdef DEBUG  
-    Serial.setRxBufferSize(96); // Increase RX buffer size
-    Serial.begin(115200);       
-    while ( !Serial ) delay(10); 
-    Serial.flush();
-    delay(1000); // Give Serial I/O time to settle
-#endif
-//----------------------------------------------------  
-    LOG("ESP32 NimBLE Tacx Legacy Virtual Shifting");
-    LOG("--------------- Version %s --------------", CODE_VERSION);
-    delay(200);
-#ifdef TACXNEO_FIRSTGENERATION
-    LOG(" -> Tacx Neo First Generation modifications active!");
-#endif
-    
+void setup() { 
   // Init NimBLEManager 
   BLEmanager->init();
   // Start scanning for a trainer
@@ -232,7 +217,6 @@ void setup() {
   while(!BLEmanager->clientIsConnected) {
     delay(100);
     if(millis() > TIMEOUT) {
-      LOG(">>> Scanning for Peripheral/Trainer --> Timeout!");
       break;
     }
   }
