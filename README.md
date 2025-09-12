@@ -182,7 +182,27 @@ If you try a different board, please share your results via this [[Feedback Issu
 3. **Open Arduino IDE** → load the examples/ sketches.
 4. **Install required libraries** using Arduino IDE Library Manager (see Dependencies).
 5. **Setup `IDE` -> `Tools menu`** for the type of board you are using!
-6. **Upload to your device** → run the example and try Virtual Shifting!
+
+<details>
+<summary><b>Select and upload the example code to your ESP32 board</b></summary>
+
+ 1. Start the Serial Monitor to catch debugging info
+ 2. Start/Power-On the Tacx Smart Trainer  
+ 3. Your ESP32 and Trainer will pair
+ 4. Start Zwift-App on your computer or tablet and wait....
+ 5. Search on the Zwift pairing screens for your ESP32 a.k.a. **TACXS**
+ 6. Pair: Power, Controllable and Cadence one after another with **TACXS**
+ 7. Pair: Controls, your Zwift Click device and optionally others
+ 8. Pair: Heartrate (optionally)
+ 9. Select any Zwift ride you like
+10. Make Serial Monitor output window visible on top of the Zwift window 
+11. Hop on the bike: do the work and feel resistance change when shifting and with road inclination
+12. Inspect the info presented by Serial Monitor.....
+ 
+> This device is identified with the name **TACXS**. You will see this only when connecting to Zwift on 
+> the pairing screens! Notice: Zwift extends device names with additional numbers for identification!
+</details>
+
 
 ## 🪄 Central configuration
 All configuration settings have been gathered in one config directory `../documents/arduino/libaries/Tacx-Virtual-Shifting/src/config` for <b>Debug</b>-, <b>NimBLE</b>- and <b>Tacx</b>-configurations. Check this out: [Configuring Tacx-Virtual-Shifting](src/config/README.md)<br>
