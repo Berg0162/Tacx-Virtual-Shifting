@@ -6,13 +6,13 @@
 Virtual Shifting lets you “change gears” on your smart trainer without touching your bike’s drivetrain.  
 Instead of physically moving your chain across cogs, software simulates different gear ratios and adjusts trainer resistance accordingly.  
 
-This feature is standard on newer Tacx trainers — but older models never received the firmware update. That’s where this project comes in.  
+This feature is standard on newer Tacx Smart trainers — but older models never received the firmware update. That’s where this project comes in.  
 
-**Goal:** Bring VS to legacy Tacx trainers so that cyclists can experience the benefits of virtual shifting *without needing to buy new trainer hardware*.  
+**Goal:** Bring VS to legacy Tacx Smart trainers so that cyclists can experience the benefits of virtual shifting *without needing to buy new trainer hardware*.  
 
 ## 🔧 What do you need to try Virtual Shifting?
 At the very minimum, you need:  
-- A **Tacx smart trainer** (legacy model without VS support).  
+- A **Tacx Smart trainer** (legacy model without VS support).  
 - A **Zwift Click device** (tested and working).
     - The Click is handy because it can be moved around and mounted in different spots on the handlebars and elsewhere. Notice that these are also offered in online marketplaces now, by people that have bought later a Zwift Play device.
 
