@@ -60,10 +60,10 @@ In back-to-back ride tests (same course, same intensity, ~60 minutes each):
 Below are cadence plots from the two test rides:
 
 **Unfiltered cadence (many spikes):**  
-![Cadence without filter](media/cadence_unfiltered.png)
+![Cadence without filter](../media/cadence_unfiltered.png)
 
 **Filtered cadence (clean signal):**  
-![Cadence with filter](media/cadence_filtered.png)
+![Cadence with filter](../media/cadence_filtered.png)
 
 ---
 
