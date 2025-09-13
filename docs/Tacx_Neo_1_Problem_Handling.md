@@ -9,7 +9,7 @@ Instead, it estimates cadence by analyzing the **power waveform per pedal stroke
 - In these cases, the Neo sometimes misinterprets (during 1-12 seconds) the signal and reports a **false doubling of cadence**.  
 
 The result:  
-- Short bursts of **160–180 rpm** cadence appear in the data stream.  
+- Short bursts of **140–180 rpm** cadence appear in the data stream.  
 - On Zwift with Virtual Shifting, cadence is part of the resistance control loop.  
 - These spikes lead to **sudden, unnatural resistance changes** for a few seconds until the value stabilizes.  
 
@@ -51,7 +51,7 @@ By conditioning cadence on **power** and **startup context**, the bridge softwar
 In back-to-back ride tests (same course, at same **low** intensity, ~60 minutes each):
 
 - **Without filtering**:  
-  > 40+ cadence spikes between 160–180 rpm, each causing a noticeable resistance disruption.  
+  > 40+ cadence spikes between 140–180 rpm, each causing a noticeable resistance disruption.  
 
 - **With filtering**:  
   > Only 2 small spikes remained, the rest were completely suppressed.  
