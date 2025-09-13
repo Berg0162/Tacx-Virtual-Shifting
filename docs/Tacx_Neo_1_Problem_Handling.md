@@ -48,7 +48,7 @@ By conditioning cadence on **power** and **startup context**, the bridge softwar
 ---
 
 ### Results
-In back-to-back ride tests (same course, same intensity, ~60 minutes each):
+In back-to-back ride tests (same course, at same **low** intensity, ~60 minutes each):
 
 - **Without filtering**:  
   > 40+ cadence spikes between 160–180 rpm, each causing a noticeable resistance disruption.  
