@@ -47,13 +47,15 @@ Make configTacx.h settings to comply with your <b>Legacy Tacx FE-C</b> smart tra
 + Set your <b>Tacx</b>-configuration for use with <b>Tacx-Virtual-Shifting</b>:
 
 ```C++
-//-------------------------------------------------------------------------------------------
-  // Legacy TACX Neo "problem": trainer firmware detection of Cadence is UNRELIABLE: 
-  // downhill accellerating w/o leg movement and periods of extreme cadences when trainer 
-  // firmware fails to detect the cadence values correctly!
-  // 1) No power generated -> cadence = 0
-  // 2) Overestimated cadence values >= 110 --> halve the estimated cadence
-  // 3) Synch FEC Instantaneous Cadence with CSC cadence
+//-----------------------------------------------------------------------------------------
+  // TACX Neo 1 has a specific "flaw": trainer firmware detection of Cadence is UNRELIABLE! 
+  // see for example: https://www.trainerroad.com/forum/t/tacx-neo-1-cadence-issue/14795
+  // Uncomment to allow a specific cadence filter for Tacx Neo 1:  
+  // - Eliminates nearly all false cadence spikes.  
+  // - Handles startup acceleration naturally, without false suppression.  
+  // - Preserves real cadence changes, even during sprints.  
+  // - Removes the disruptive resistance jumps in Zwift Virtual Shifting.  
+  // - Adds minimal complexity and no extra latency.  
 #define TACXNEO_FIRSTGENERATION
 
 // To calculate the speed we assume a default wheel diameter of 0.7m and take the current 
