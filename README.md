@@ -31,6 +31,7 @@ This project bridges your trainer and Zwift so that **pressing shift buttons on 
 - At minimal cost this project can unlock a similar experience and extend the lifespan of your trainer. 
 - Garmin/Tacx has enabled VS on **ONLY** selected new models.
   - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
+  - Garmin/Tacx considered this update so important that they have replaced the FTMS service for the Zwift Virtual Shifting Service in the latest firmware. The idea behind this firmware update is that shifting is now handled by the trainer rather than by Zwift... All wellknown trainer manufacturers have embraced this Zwift initiative, which changes the landscape considerably.
 - This repo provides **an Arduino library + concise examples** so you can try VS yourself.  
 
 ## 🛠 Who is this for?
