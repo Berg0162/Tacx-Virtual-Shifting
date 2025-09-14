@@ -71,5 +71,6 @@ Make configTacx.h settings to comply with your <b>Legacy Tacx FE-C</b> smart tra
 // My setup: 34/17 -> 2.0 -> gear 10
 #define DEFAULTGEARRATIO 2.4  // Default gear ratio of the bike (chainring / sprocket)
 ```
+[TACXNEO_FIRSTGENERATION option explained](https://github.com/Berg0162/Tacx-Virtual-Shifting/blob/main/docs/Tacx_Neo_1_Problem_Handling.md)
 
 <b>Warning</b>: When a new version of **Tacx-Virtual-Shifting** is installed in Arduino IDE 2 it will override <b>ALL</b> files of a previous version! If you have made modifications in a file that is part of `Tacx-Virtual-Shifting` --> <b>Make</b> a <b>copy</b> of the file(s) in question <b>BEFORE</b> you <b>install</b> a new library version!
