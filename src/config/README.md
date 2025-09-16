@@ -68,7 +68,6 @@ Make configTacx.h settings to comply with your <b>Legacy Tacx FE-C</b> smart tra
 // As the Zwift Cog has 14 teeth and a standard chainring 34 teeth the default ratio is 
 // defined at 2.4 which roughly matches Zwift Gear 12
 // Calculated as Chainring/Sprocket --> 2.4 equals gear 12    
-// My setup: 34/17 -> 2.0 -> gear 10
 #define DEFAULTGEARRATIO 2.4  // Default gear ratio of the bike (chainring / sprocket)
 ```
 [Tacx Neo 1 option explained](https://github.com/Berg0162/Tacx-Virtual-Shifting/blob/main/docs/Tacx_Neo_1_Problem_Handling.md)
