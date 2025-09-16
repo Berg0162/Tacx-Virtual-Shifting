@@ -56,7 +56,7 @@ Make configTacx.h settings to comply with your <b>Legacy Tacx FE-C</b> smart tra
   // - Preserves real cadence changes, even during sprints.  
   // - Removes the disruptive resistance jumps in Zwift Virtual Shifting.  
   // - Adds minimal complexity and no extra latency.  
-#define TACXNEO_FIRSTGENERATION
+//#define TACXNEO_FIRSTGENERATION
 
 // To calculate the speed we assume a default wheel diameter of 0.7m and take the current 
 // cadence from the trainer
