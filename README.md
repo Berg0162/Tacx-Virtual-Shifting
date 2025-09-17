@@ -48,6 +48,7 @@ You don’t need to hack the internals — just upload the example sketche(s) an
 - **`/src/config`** → configuration settings
 - **`/examples`** → ready-to-run demos showing how to connect and shift.  
 - **`/docs`** → background info and board setup.
+- **`/media`** → applied images store.
 - 
 ## 🪄 How the code works?
 At its core, this project acts as a **bridge** between Zwift Virtual Shifting (VS) and the legacy Tacx Smart trainer.  
