@@ -1,5 +1,11 @@
 # <img src="/media/ESP32_Icon.png" width="110" height="34" align="bottom" alt="ESP32 Icon"> Tacx-Virtual-Shifting
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Berg0162/Tacx-Virtual-Shifting?sort=semver)](https://github.com/Berg0162/Tacx-Virtual-Shifting/releases)
+[![Arduino Library](https://www.ardu-badge.com/badge/TacxVirtualShifting.svg?version=1.0.0)](https://www.ardu-badge.com/TacxVirtualShifting)
+[![Platform: ESP32](https://img.shields.io/badge/platform-ESP32-orange)](https://www.espressif.com/en/products/socs/esp32)
+[![GitHub issues](https://img.shields.io/github/issues/Berg0162/Tacx-Virtual-Shifting)](https://github.com/Berg0162/Tacx-Virtual-Shifting/issues)
+
 **Virtual Shifting (VS) for Legacy Tacx Smart trainers, that are deprived of the Tacx VS-enabling firmware update.**
 
 ## 🚴 What is Virtual Shifting (VS)?
