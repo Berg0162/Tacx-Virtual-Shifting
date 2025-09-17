@@ -13,7 +13,7 @@ This feature is standard on newer Tacx Smart trainers — but older models never
 ## 🔧 What do you need to try Virtual Shifting?
 At the very minimum, you need:  
 - A **Tacx Smart trainer** (legacy model without VS support).  
-- A **Zwift Click device** (tested and working).
+- A **Zwift Click device** (traded by Zwift).
     - The Click is handy because it can be moved around and mounted in different spots on the handlebars and elsewhere. Notice that these are also offered in online marketplaces now, by people that have bought later a Zwift Play device.
 
 👉 That’s it! No need for extra gadgets.  
