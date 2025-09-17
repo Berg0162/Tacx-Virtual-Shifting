@@ -8,7 +8,9 @@ Instead of physically moving your chain across cogs, software simulates differen
 
 This feature is standard on newer Tacx Smart trainers — but older models never received the firmware update. That’s where this project comes in.  
 
-**Goal:** Bring VS to legacy Tacx Smart trainers so that cyclists can experience the benefits of virtual shifting *without needing to buy new trainer hardware*.  
+**Goal:** Bring VS to legacy Tacx Smart trainers so that cyclists can experience the benefits of virtual shifting *without needing to buy new trainer hardware*. 
+
+<img src="/media/Tacx_Virtual_Shifting.png" width="564" height="200" align="center" alt="Shifting Diagram">
 
 ## 🔧 What do you need to try Virtual Shifting?
 At the very minimum, you need:  
