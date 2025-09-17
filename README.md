@@ -160,7 +160,7 @@ Expected compatibility:
   - Flow Smart and
   - Satori Smart.
 
-⚠️ If you test this on another model than the Neo, please share your results in this [[Feedback Issue]](https://github.com/Berg0162/Tacx-Virtual-Shifting/issues/1#issue-3366715494).
+⚠️ If you test this on another model than the Neo, please share your results in [Discussions](https://github.com/Berg0162/Tacx-Virtual-Shifting/discussions).
 
 ## 🔌 Tested Boards
 
@@ -180,7 +180,7 @@ Each board has its own **setup instructions** in `/docs` to ensure correct confi
 - **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
 
 👉 Other ESP32-based boards may work as well, but are not tested.  
-If you try a different board, please share your results via this [[Feedback Issue]](https://github.com/Berg0162/Tacx-Virtual-Shifting/issues/1#issue-3366715494).  
+If you try a different board, please share your results via [Discussions](https://github.com/Berg0162/Tacx-Virtual-Shifting/discussions) 
 
 ## ⚡ Getting Started
 1. **Install Arduino IDE 2.x** → [Download here](https://www.arduino.cc/en/software).  
@@ -284,8 +284,7 @@ We are committed to responding promptly and, if appropriate, taking corrective a
 ## ❤️ Contributing
 
 This project is just starting!
-If you’re interested in testing, coding, writing docs, or just giving feedback, contributions are welcome. [Feedback Issue](https://github.com/Berg0162/Tacx--Shifting/issues/1#issue-3366715494)
-
+If you’re interested in testing, coding, writing docs, or just giving feedback, contributions are welcome in [Discussions](https://github.com/Berg0162/Tacx-Virtual-Shifting/discussions).
 <details>
 <summary>⚖️ <b>Legal Notice (EU Context)</b></summary>
 
