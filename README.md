@@ -1,5 +1,11 @@
 # <img src="/media/ESP32_Icon.png" width="110" height="34" align="bottom" alt="ESP32 Icon"> Tacx-Virtual-Shifting
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Berg0162/Tacx-Virtual-Shifting?sort=semver)](https://github.com/Berg0162/Tacx-Virtual-Shifting/releases)
+[![Platform: ESP32](https://img.shields.io/badge/platform-ESP32-orange)](https://www.espressif.com/en/products/socs/esp32)
+[![GitHub issues](https://img.shields.io/github/issues/Berg0162/Tacx-Virtual-Shifting)](https://github.com/Berg0162/Tacx-Virtual-Shifting/issues)
+[![GitHub Discussions](https://img.shields.io/github/discussions/Berg0162/Tacx-Virtual-Shifting)](https://github.com/Berg0162/Tacx-Virtual-Shifting/discussions)
+
 **Virtual Shifting (VS) for Legacy Tacx Smart trainers, that are deprived of the Tacx VS-enabling firmware update.**
 
 ## 🚴 What is Virtual Shifting (VS)?
@@ -9,10 +15,6 @@ Instead of physically moving your chain across cogs, software simulates differen
 This feature is standard on newer Tacx Smart trainers — but older models never received the firmware update. That’s where this project comes in.  
 
 **Goal:** Bring VS to legacy Tacx Smart trainers so that cyclists can experience the benefits of virtual shifting *without needing to buy new trainer hardware*. 
-
-<p align="center">
-  <img src="/media/Tacx_Virtual_Shifting.png" width="564" height="200" alt="Shifting Diagram">
-</p>
 
 ## 🔧 What do you need to try Virtual Shifting?
 At the very minimum, you need:  
