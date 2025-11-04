@@ -175,11 +175,19 @@ This project has been tested successfully with the following ESP32 MCU boards:
 <img src="./media/Adafruit_Feather_ESP32_V2.png" width="300" height="300" ALIGN="left" alt="Feather">
 <br clear="left">
 
-Both boards work reliably with this project. Check pricing and availability! 
+- **LilyGo_T-Dongle-S3**
+<img src="./media/LilyGo_T-Dongle-S3.png" width="600" height="190" ALIGN="left" alt="T-Dongle-S3">
+<br clear="left">
+<br>
 
-Each board has its own **setup instructions** in `/docs` to ensure correct configuration and library installation.
+The boards work reliably with this project. Check pricing and availability! 
+
+Two boards have their own **setup instructions** in `/docs` to ensure correct configuration and library installation.
 - **[Seeed Studio XIAO ESP32S3](docs/XIAO_ESP32S3.md)**
-- **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**
+- **[Adafruit Feather ESP32 V2](docs/Adafruit%20Feather%20ESP32-V2.md)**<br>
+
+The selfcontained T-Dongle-S3 has a dedicated github repo
+- **[Tacx-Dongle-VS](https://github.com/Berg0162/Tacx-Dongle-VS)**
 
 👉 Other ESP32-based boards may work as well, but are not tested.  
 If you try a different board, please share your results via [Discussions](https://github.com/Berg0162/Tacx-Virtual-Shifting/discussions) 
