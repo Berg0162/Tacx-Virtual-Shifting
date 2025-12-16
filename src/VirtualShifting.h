@@ -43,7 +43,7 @@ class ZVS {
   void server_setupZVS(NimBLEServer* pServer);
   void serverVSSYNCTXOnSubscribe(NimBLECharacteristic* pCharacteristic, NimBLEConnInfo& connInfo, uint16_t subValue);
   bool isServerVSsynctxIndicateEnabled = false;
-  void serverVSSYNCTXOnWrite(NimBLECharacteristic* pCharacteristic, NimBLEConnInfo& connInfo);
+  void serverVSSYNCRXOnWrite(NimBLECharacteristic* pCharacteristic, NimBLEConnInfo& connInfo);
   void serverVSASYNCOnSubscribe(NimBLECharacteristic* pCharacteristic, NimBLEConnInfo& connInfo, uint16_t subValue);
   bool isServerVSasyncNotifyEnabled = false;
 
