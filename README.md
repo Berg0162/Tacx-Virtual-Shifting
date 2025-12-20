@@ -41,20 +41,6 @@ This project bridges your trainer and Zwift so that **pressing shift buttons on 
   - Later than Wahoo and Elite, Garmin/Tacx deployed in the summer of 2025 a VS firmware update for recent Tacx smart trainers!
   - Garmin/Tacx considered this update so important that they have **replaced** the FTMS service by the Zwift Virtual Shifting Service in the latest firmware. The idea behind this firmware update is that shifting is now handled by the trainer rather than by Zwift... All wellknown trainer manufacturers have embraced this Zwift initiative, which changes the landscape considerably.
 - This repo provides **an Arduino library + concise examples** so you can try VS yourself.
-  
-## 🚴 Virtual Shifting with ROUVY from release version 1.0.1
-
-**ROUVY** is an app for realistic indoor cycling with real routes, training, and events. **ROUVY** added support for Zwift Virtual Shifting (VS) in **February 2025**, enabling interoperability with virtual shifting–capable trainers and hardware.
-This **Tacx-Virtual-Shifting** library supports not only the **Zwift App** but also the **ROUVY App**.
-
-### Compatible hardware:
-- **Zwift Click shifter**
-- **Zwift Ride smart frame** (integrated controllers)
-
-> **Not** supported by **ROUVY** at this time:
-> - **Zwift Play controllers**
-
-No Zwift Cog is required; a fixed bike gear position (e.g. **34/17**) is sufficient.
 
 ## 🛠 Who is this for?
 This project is written with (novice) **programmers who are also cyclists** in mind.  
