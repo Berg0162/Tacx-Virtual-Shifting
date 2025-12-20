@@ -9,6 +9,8 @@
 [![GitHub Discussions](https://img.shields.io/github/discussions/Berg0162/Tacx-Virtual-Shifting)](https://github.com/Berg0162/Tacx-Virtual-Shifting/discussions)
 
 **Virtual Shifting (VS) for Legacy Tacx Smart trainers, that are deprived of the Tacx VS-enabling firmware update.**
+> **New in v1.0.1:** Added **ROUVY app support** and **haptic feedback on virtual gear changes**, further closing the gap with modern VS-enabled Tacx trainers. — see [Improvements in v1.0.1](#-improvements-in-v101).
+
 
 ## 🚴 What is Virtual Shifting (VS)?
 Virtual Shifting lets you “change gears” on your smart trainer without touching your bike’s drivetrain.  
@@ -225,6 +227,41 @@ If you try a different board, please share your results via [Discussions](https:
 ## 🪄 Central configuration
 All configuration settings have been gathered in one config directory `../documents/arduino/libaries/Tacx-Virtual-Shifting/src/config` for <b>Debug</b>-, <b>NimBLE</b>- and <b>Tacx</b>-configurations. Check this out: [Configuring Tacx-Virtual-Shifting](src/config/README.md)<br>
 
+## 🚀 Improvements in v1.0.1
+
+Release **v1.0.1** extends Tacx-Virtual-Shifting with both **broader platform support** and **enhanced ride feedback**, bringing legacy Tacx trainers closer to the experience of modern VS-enabled models.
+
+<details>
+<summary><b>🚴 ROUVY App Support</b></summary>
+    
+**ROUVY** is an indoor cycling platform focused on realistic routes, training, and events.  
+In **February 2025**, ROUVY added support for Zwift-style Virtual Shifting (VS), enabling interoperability with compatible hardware.
+
+Starting with **v1.0.1**, the **Tacx-Virtual-Shifting** library supports:
+- **Zwift App**
+- **ROUVY App**
+
+**Compatible hardware**
+- **Zwift Click shifter**
+- **Zwift Ride smart frame** (integrated controllers)
+
+> **Not supported by ROUVY at this time**
+> - **Zwift Play controllers**
+
+No Zwift Cog is required; a fixed bike gear position (e.g. **34/17**) is sufficient.
+</details>
+
+<details>
+<summary><b>🔔 Haptic Feedback on Gear Changes</b></summary>
+    
+Release **v1.0.1** also introduces **haptic feedback on virtual gear changes**.
+
+When a virtual shift is triggered (for example via Zwift Click), the trainer briefly responds with a short vibration or resistance “tap”.  
+This behavior mimics the feedback found on newer Tacx trainers that received the official Virtual Shifting firmware update.
+
+The result is improved tactile confirmation and a more immersive shifting experience on **legacy Tacx trainers**.
+</details>
+    
 ## 🙏 Credits
 This project builds on the work of several excellent open-source projects.  
 - **[SHIFTR](https://github.com/JuergenLeber/SHIFTR)** — BLE to Direct Connect bridge for bike trainers adding virtual shifting for Zwift (GPL-3.0 License)  
