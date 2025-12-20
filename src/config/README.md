@@ -71,10 +71,10 @@ Make configTacx.h settings to comply with your <b>Legacy Tacx FE-C</b> smart tra
 #define DEFAULTGEARRATIO 2.4  // Default gear ratio of the bike (chainring / sprocket)
 
 //-------------------------------------------------------------------------------------------
-// Uncomment to allow for haptic feedback when:  
-// Simulating gear changes with quick resistance adjustments and a short "click-sequence" 
-// feeling within the trainer itself, adding to realism without physical chain movement, 
-// making for an attractive ride experience.
+// Uncomment to allow for haptic feedback 
+// When a virtual shift is triggered (for example via Zwift Click), the trainer briefly responds
+// with a short vibration or resistance “tap”. This behavior mimics the feedback found on newer
+// Tacx trainers that received the official Virtual Shifting firmware update.
 #define TACXNEO_HAPTIC_FEEDBACK
 ```
 [Tacx Neo 1 option explained](https://github.com/Berg0162/Tacx-Virtual-Shifting/blob/main/docs/Tacx_Neo_1_Problem_Handling.md)
