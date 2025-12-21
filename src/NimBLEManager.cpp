@@ -165,16 +165,19 @@ void NimBLEManager::setupAdvertising(void) {
 
   // Put 128-bit UUID in Scan Response
   NimBLEAdvertisementData scanResp;
+
   if (scanResp.addServiceUUID(UUID_TACX_FEC_PRIMARY_SERVICE))
     LOG("Setting Service in Scan Response to      [FEC]");
+  else LOG("Setting <FEC> Service in Scan Response   [FAILED!]");
+
   if (pAdvertising->setScanResponseData(scanResp))
     LOG("Setting Scan Response Data in Advertised data");
 
   if(pAdvertising->setAppearance(GAS::getInstance()->client_GA_Appearance_Value))
     LOG("Setting Appearance in Advertised data to [%d]", GAS::getInstance()->client_GA_Appearance_Value);
-
   if(pAdvertising->setName(THISDEVICENAME))
     LOG("Setting DeviceName in Advertised data to [%s]", THISDEVICENAME);
+
   //Add the transmission power level to the advertisement packet.
   if(pAdvertising->addTxPower())
     LOG("Setting Transmission Power in Advertised data");

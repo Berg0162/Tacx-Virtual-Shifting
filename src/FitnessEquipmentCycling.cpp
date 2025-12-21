@@ -1,5 +1,4 @@
 #include "FitnessEquipmentCycling.h"
-#include "config/configTacx.h"
 #include "NimBLEManager.h"
 
 // ------------------------------------------------------------------------------------------------
@@ -99,6 +98,19 @@ enum FECPageType : uint8_t {
     TRACK_RESISTANCE = 0x33,     // Data Page 51 (0x33) – Track Resistance
     COMMAND_STATUS = 0x47,       // Common Page 71 (0x47) – Command Status
     FE_CAPABILITIES = 0x36       // Data Page 54 (0x36) - FE Capabilities
+};
+
+enum RoadSurfaceType : uint8_t { 
+  NONE = 0x00, 
+  CONCRETE_PLATES = 0x01, 
+  CATTLE_GUARD = 0x02, 
+  COBBLESTONES_HARD = 0x03, 
+  COBBLESTONES_SOFT = 0x04, 
+  BRICKS = 0x05, 
+  OFFROAD = 0x06, 
+  GRAVEL = 0x07, 
+  ICE = 0x08, 
+  WOODEN_BOARDS = 0x09 
 };
 
 ///////////////////////////////////////////////
@@ -347,6 +359,55 @@ uint16_t FEC::getInstantSpeed(void){
   return trainerInstantSpeed;
 }
 
+bool FEC::isTrainerMoving(void) {
+    if ((trainerInstantCadence > 1) && (trainerInstantPower > 1)) {
+      //LOG("--> Cadence: [%03d] - Power in Watts: [%04d]", trainerInstantCadence, trainerInstantPower);
+      return true;
+    } else return false;
+}
+
+uint8_t FEC::getRoadFeelIntensity(void) {
+  // Calculate Road Feel Intensity as a function of zwiftInstantGrade Percentage
+  if(zwiftInstantGrade <= 0.0f) return (uint8_t)100;
+  return (uint8_t)(100.0f - std::clamp(zwiftInstantGrade*20.0f, 0.0f, 100.0f) ); // Limit value between 0 and 100
+}
+
+#ifdef TACXNEO_HAPTIC_FEEDBACK
+void FEC::xTaskGiveHapticFeedback(void *parameter) {
+    FEC* fecInstance = (FEC*)parameter;
+
+    while (true) {
+        // Wait here until notified by triggerHapticFeedback()
+        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+
+        if (fecInstance->isTrainerMoving()) {
+            const uint8_t type = WOODEN_BOARDS;
+            const uint8_t intensity = 0x50;
+
+            //LOG("--> Haptic Feedback Event type: 0x%02X intensity: 0x%02X", type, intensity);
+            // Trigger haptic feedback with sequence of Road Feel data
+            fecInstance->writeFECRoadFeel(type, intensity); // 1
+            vTaskDelay(pdMS_TO_TICKS(100));
+            fecInstance->writeFECRoadFeel(type, intensity); // 2
+            vTaskDelay(pdMS_TO_TICKS(100));
+            fecInstance->writeFECRoadFeel(type, intensity); // 3
+            vTaskDelay(pdMS_TO_TICKS(100));
+            // Done! Set to: NONE
+            fecInstance->writeFECRoadFeel(NONE, intensity); // reset
+        }
+    }
+}
+
+void FEC::triggerHapticFeedback(uint64_t zwiftGearRatio) {
+    static uint64_t prevZwiftGearRatio = 0;
+    if(prevZwiftGearRatio != zwiftGearRatio) {
+      if (prevZwiftGearRatio != 0)  // Skip first time gear setup: prevZwiftGearRatio == 0
+        xTaskNotifyGive(xTaskHapticFeedbackHandle);
+      prevZwiftGearRatio = zwiftGearRatio;
+    }
+}
+#endif
+
 void FEC::Static_FEC_Rxd_Notify_Callback(NimBLERemoteCharacteristic* pBLERemoteCharacteristic, \
                                                                           uint8_t* pData, size_t length, bool isNotify) {
     if (instance) {
@@ -358,7 +419,7 @@ bool FEC::client_FitnessEquipmentCycling_Connect(NimBLEClient* pClient) {
     // Obtain a reference to the remote FEC service.
     pRemote_FitnessEquipmentCycling_Service = pClient->getService(UUID_TACX_FEC_PRIMARY_SERVICE);
     if (pRemote_FitnessEquipmentCycling_Service == nullptr) {
-      LOG("Cycling Speed Cadence Service: Not Found!");
+      LOG("Fitness Equipment Cycling Service: Not Found!");
       return false;
     }
     LOG("Client_FitnessEquipmentCycling_Service: Found!");
@@ -382,6 +443,16 @@ bool FEC::client_FitnessEquipmentCycling_Connect(NimBLEClient* pClient) {
       LOG("Mandatory Client_FEC_Rxd_Chr: Cannot Write!");
       return false;
     }
+#ifdef TACXNEO_HAPTIC_FEEDBACK
+    // -------------------------------------------------------------------------------------------------
+    // Start task xTaskGiveHapticFeedback -> Pin task to core 0 and high priority
+    // Check first if xTaskHapticFeedbackHandle does not exist
+    if(xTaskHapticFeedbackHandle == NULL) { 
+      xTaskCreatePinnedToCore(this->xTaskGiveHapticFeedback, "Haptic feedback", 4096, (void *)this, 15, \
+                                &this->xTaskHapticFeedbackHandle, xTaskCoreID0);
+      LOG("Client FEC Haptic Feedback Task Created!");
+    }
+#endif
     return true;    
 }
 
@@ -525,6 +596,24 @@ bool FEC::writeFECCapabilitiesRequest(void) {
   return write_Client_FEC_Txd_Chr(&fecData);
 }
 
+bool FEC::writeFECRoadFeel(uint8_t type, uint8_t intensity) {
+  std::vector<uint8_t> fecData;
+  fecData.push_back(0xA4);  // SYNC
+  fecData.push_back(0x09);  // MSG_LEN
+  fecData.push_back(0x4E);  // MSG_ID
+  fecData.push_back(0x05);  // CONTENT_START
+  fecData.push_back(0xFC);  // PAGE 252 (0xFC) Tacx Custom Page
+  fecData.push_back(0x00);
+  fecData.push_back(0x00);
+  fecData.push_back(0x64);  // 100 (0x64)
+  fecData.push_back(0x00);
+  fecData.push_back(type);  // Between 00-09
+  fecData.push_back(intensity);
+  fecData.push_back(0x00);
+  fecData.push_back(getFECChecksum(&fecData));  // CHECKSUM
+  return write_Client_FEC_Txd_Chr(&fecData);
+}
+
 void FEC::setTrainerInNeutral(void) {
     if (!writeFECTrackResistance((uint16_t)(UTILS::FEC_ZERO), (uint8_t)round(UTILS::rollingResistanceCoefficient*20000)) ) { 
       LOG("Error writing FEC track resistance to zero");
@@ -533,6 +622,8 @@ void FEC::setTrainerInNeutral(void) {
 
 void FEC::updateTrainerResistance(UTILS::TrainerMode zwiftTrainerMode, uint64_t zwiftPower, int64_t zwiftGrade, \
                                     uint64_t zwiftGearRatio, uint16_t zwiftBicycleWeight, uint16_t zwiftUserWeight) {
+  // Store zwiftGrade locally
+  zwiftInstantGrade = (float)(zwiftGrade)/100.0f;
   // SIM Mode (NO VS), use simple Track Resistance
   if (zwiftTrainerMode == UTILS::TrainerMode::SIM_MODE) {
     if (!writeFECTrackResistance((uint16_t)(UTILS::FEC_ZERO + zwiftGrade), (uint8_t)round(UTILS::rollingResistanceCoefficient*20000)) ) { 

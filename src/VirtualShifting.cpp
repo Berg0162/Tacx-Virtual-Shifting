@@ -41,6 +41,7 @@ const uint8_t zwiftSyncInfoReqResponse[55] = {0x3c, 0x08, 0x00, 0x12, 0x32, 0x0a
                                             0x39, 0x38, 0x34, 0x00, 0x00, 0x00, 0x00, 0x3a, 0x01, 0x31, 0x42, 0x04, 0x08, \
                                             0x01, 0x10, 0x14};
 */
+const uint8_t zwiftSyncReq3Response[12] = {0x3c, 0x08, 0x88, 0x04, 0x12, 0x06, 0x0a, 0x04, 0x40, 0xc0, 0xbb, 0x01};
 const uint8_t zwiftSyncReq10Response[41] = {0x3c, 0x08, 0x00, 0x12, 0x24, 0x08, 0x80, 0x04, 0x12, 0x04, 0x00, 0x04, 0x00, \
                                           0x0c, 0x1a, 0x00, 0x32, 0x0f, 0x42, 0x41, 0x2d, 0x45, 0x34, 0x33, 0x37, 0x32, \
                                           0x44, 0x39, 0x32, 0x37, 0x42, 0x44, 0x45, 0x3a, 0x00, 0x42, 0x04, 0x08, 0x01, \
@@ -143,6 +144,7 @@ void ZVS::server_setupZVS(NimBLEServer* pServer) {
     server_VS_SYNCTX_Chr->setCallbacks(new server_VS_SYNCTX_Chr_callbacks(this));   
     server_VS_Service->start();   
 }
+
 std::map<uint8_t, uint64_t> ZVS::getZwiftDataValues(std::vector<uint8_t> *requestData) {
   std::map<uint8_t, uint64_t> returnMap;
   if (requestData->size() > 2) {
@@ -222,7 +224,7 @@ std::vector<uint8_t> ZVS::generateZwiftAsyncNotificationData(int64_t power, int6
 void ZVS::notifyZwiftAsyncTrainerData(void) {
   uint16_t trainerPower = FEC::getInstance()->getInstantPower();
   uint8_t trainerCadence = FEC::getInstance()->getInstantCadence();
-  LOG("Notify ASYNC Trainer Data -> Power: %d Cadence: %d", trainerPower, trainerCadence);
+  LOG("Notify ASYNC Trainer Data -> Power: %d Cadence: %d isMoving: %X", trainerPower, trainerCadence, FEC::getInstance()->isTrainerMoving());
   std::vector<uint8_t> notificationData = generateZwiftAsyncNotificationData(trainerPower, trainerCadence, 0, 0, 0, 0);
   if(isServerVSasyncNotifyEnabled) {
     server_VS_ASYNC_Chr->setValue(notificationData.data(), notificationData.size());
@@ -271,14 +273,23 @@ void ZVS::processZwiftSyncRequest(std::vector<uint8_t> *requestData) {
     }
 */
     switch (zwiftCommand) {
-      // Status request Zwift Play init3 -> [00 08 00]
+      // Status request Zwift Play init #
       case 0x00:
         if( (zwiftCommandSubtype == 0x08) && (zwiftCommandLength == 0x00) ) {
-            LOG(" -> Zwift 0x08 Init Request: Responded!");
-            if(isServerVSsynctxIndicateEnabled)
+            // Status request Zwift Play -> [00 08 00]
+            LOG(" -> Zwift 0x08 Init #10 Request: Responded!");
+            if(isServerVSsynctxIndicateEnabled) {
               server_VS_SYNCTX_Chr->setValue(zwiftSyncReq10Response, sizeof(zwiftSyncReq10Response));
               server_VS_SYNCTX_Chr->indicate();
-          } else
+            }
+        } if( (zwiftCommandSubtype == 0x08) && (zwiftCommandLength == 0x88) && (requestData->at(3) == 0x04) ) { 
+            // Status request Zwift Play ->  [00 08 88 04]
+            LOG(" -> Zwift 0x08 Status Request: Responded!");
+            if(isServerVSsynctxIndicateEnabled) {
+              server_VS_SYNCTX_Chr->setValue(zwiftSyncReq3Response, sizeof(zwiftSyncReq3Response));
+              server_VS_SYNCTX_Chr->indicate();
+            }
+        } else
             LOG(" -> Unsolved Zwift 0x08 Request: No Response!");  
         return;
         break;
@@ -322,7 +333,7 @@ void ZVS::processZwiftSyncRequest(std::vector<uint8_t> *requestData) {
                                                                               zwiftBicycleWeight, zwiftUserWeight);
             break;
 
-          // SIM mode and SIM Mode + VS --> parameter update: zwift Gear Ratio, Bicycle Weight and Rider Weight
+          // SIM mode and SIM Mode + VS --> parameter update: zwift Gear Ratio, Optional: Bicycle Weight and Rider Weight
           case 0x2A: { // create a scope for temp variables
             if (requestValues.find(0x10) != requestValues.end()) {
               zwiftGearRatio = requestValues.at(0x10);
@@ -347,8 +358,15 @@ void ZVS::processZwiftSyncRequest(std::vector<uint8_t> *requestData) {
               LOG(" -> zwiftBicycleWeight: %4.1f zwiftUserWeight: %4.1f", (float)zwiftBicycleWeight/100, \
                                                                                          (float)zwiftUserWeight/100);
             }
+
+            // Update NOW the Trainer Resistance accordingly
             FEC::getInstance()->updateTrainerResistance(zwiftTrainerMode, zwiftPower, zwiftGrade, zwiftGearRatio, \
                                                                                 zwiftBicycleWeight, zwiftUserWeight);
+#ifdef TACXNEO_HAPTIC_FEEDBACK
+            // Gear has Changed -> Trigger Haptic Feedback Event
+            if(zwiftTrainerMode == UTILS::TrainerMode::SIM_MODE_VIRTUAL_SHIFTING)
+              FEC::getInstance()->triggerHapticFeedback(zwiftGearRatio);
+#endif
             break;
           } // scope
           // Unknown
