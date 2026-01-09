@@ -138,7 +138,7 @@ void ZVS::server_setupZVS(NimBLEServer* pServer) {
     server_VS_Service = pServer->createService(ZWIFT_VIRTUAL_SHIFTING_SERVICE);
     server_VS_ASYNC_Chr = server_VS_Service->createCharacteristic(ZWIFT_ASYNC_CHARACTERISTIC_UUID, NIMBLE_PROPERTY::NOTIFY);
     server_VS_ASYNC_Chr->setCallbacks(new server_VS_ASYNC_Chr_callbacks(this));
-    server_VS_SYNCRX_Chr = server_VS_Service->createCharacteristic(ZWIFT_SYNCRX_CHARACTERISTIC_UUID, NIMBLE_PROPERTY::WRITE);
+    server_VS_SYNCRX_Chr = server_VS_Service->createCharacteristic(ZWIFT_SYNCRX_CHARACTERISTIC_UUID, NIMBLE_PROPERTY::WRITE_NR);
     server_VS_SYNCRX_Chr->setCallbacks(new server_VS_SYNCRX_Chr_callbacks(this));
     server_VS_SYNCTX_Chr = server_VS_Service->createCharacteristic(ZWIFT_SYNCTX_CHARACTERISTIC_UUID, NIMBLE_PROPERTY::INDICATE);
     server_VS_SYNCTX_Chr->setCallbacks(new server_VS_SYNCTX_Chr_callbacks(this));   
